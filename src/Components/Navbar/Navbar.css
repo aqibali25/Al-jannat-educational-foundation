@@ -1,0 +1,21 @@
+.navbar-right {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.navbar-right a {
+  font-size: 1.3rem;
+}
+.navbar-right a:hover {
+  color: #fa9e1d;
+}
+@media (max-width: 991px) {
+  .navbar-right {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+}

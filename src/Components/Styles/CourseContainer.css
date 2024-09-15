@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 20px;
+}
+.row {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  justify-content: center;
+  width: 100%;
+}
+.card {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 992px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card {
+  width: 100%;
+  margin: 0 auto;
+}
