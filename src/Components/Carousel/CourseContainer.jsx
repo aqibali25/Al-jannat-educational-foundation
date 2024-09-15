@@ -40,7 +40,7 @@ const CourseContainer = () => {
     <div className="container">
       <h1>Courses</h1>
       <CourseCards courses={courses} />
-      <button className="btn btn-outline-success">See All Courses</button>
+      <button className="btnCourses">See All Courses</button>
     </div>
   );
 };

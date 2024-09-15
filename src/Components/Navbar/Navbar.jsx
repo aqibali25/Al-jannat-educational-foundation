@@ -2,7 +2,7 @@ import React from "react";
 import NavbarBrand from "./NavbarBrand";
 import NavbarToggle from "./NavbarToggle";
 import NavItem from "./NavItem";
-import "./Navbar.css";
+import "../Styles/Navbar.css";
 
 const Navbar = () => {
   const navItemsArray = [
