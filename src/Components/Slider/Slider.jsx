@@ -39,13 +39,13 @@ processes. Proactively drive.`,
 
 const Slider = () => {
   const SliderStyles = {
-    marginTop: "80px",
+    marginTop: "70px",
   };
 
   return (
     <div
       id="carouselExampleCaptions"
-      className="carousel slide"
+      className="carousel slide imageSlider"
       style={SliderStyles}
     >
       <CarouselIndicators slides={slides} />

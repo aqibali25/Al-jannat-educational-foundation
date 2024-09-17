@@ -1,23 +1,21 @@
-// Function to count up numbers
 export function countUp(element, endValue, speed = 10) {
   let startValue = 0;
-  const duration = 1000; // Duration in ms (speed up by reducing the duration)
-  const incrementValue = endValue / (duration / speed); // Faster speed
+  const duration = 800;
+  const incrementValue = endValue / (duration / speed);
 
   const updateCounter = () => {
     startValue += incrementValue;
     if (startValue >= endValue) {
-      element.textContent = endValue; // Set the final value
+      element.textContent = endValue;
     } else {
       element.textContent = Math.floor(startValue);
-      setTimeout(updateCounter, speed); // Faster update speed
+      setTimeout(updateCounter, speed);
     }
   };
 
   updateCounter();
 }
 
-// Function to check when stats section is visible and trigger the count-up animation
 export function initStatsAnimation() {
   const statsSection = document.querySelector(".stats-section");
   const statsValues = document.querySelectorAll(".stat-value");
@@ -25,15 +23,14 @@ export function initStatsAnimation() {
   const observer = new IntersectionObserver(
     (entries) => {
       if (entries[0].isIntersecting) {
-        // Start counting up for each stat
         statsValues.forEach((stat) => {
           const endValue = parseInt(stat.getAttribute("data-value"));
-          countUp(stat, endValue, 10); // Faster animation
+          countUp(stat, endValue, 10);
         });
-        observer.disconnect(); // Only trigger the animation once
+        observer.disconnect();
       }
     },
-    { threshold: 0.3 } // Trigger when 30% of the section is visible
+    { threshold: 0.3 }
   );
 
   // Observe the stats section

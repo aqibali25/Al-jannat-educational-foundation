@@ -7,10 +7,10 @@ import "../Styles/Navbar.css";
 const Navbar = () => {
   const navItemsArray = [
     { name: "Home", link: "#" },
-    { name: "About", link: "#" },
-    { name: "Academics", link: "#" },
+    { name: "About", link: "#wellcomeSection" },
+    { name: "Academics", link: "#coursesSection" },
     { name: "Admission", link: "#" },
-    { name: "Contact", link: "#" },
+    { name: "Contact", link: "#contactSection" },
   ];
   const navItemStyle = {
     padding: "15px",
