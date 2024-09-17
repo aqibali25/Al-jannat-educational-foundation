@@ -6,6 +6,7 @@ import "./Components/Styles/App.css";
 import EventSection from "./components/EventSection/EventSection";
 import StatsSection from "./components/StatsSection/StatsSection";
 import ContactForm from "./Components/ContactForm/ContactForm";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <section id="contactSection">
         <ContactForm />
       </section>
+      <Footer></Footer>
     </>
   );
 }
