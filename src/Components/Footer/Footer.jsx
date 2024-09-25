@@ -3,7 +3,7 @@ import Newsletter from "./Newsletter";
 import Navigation from "./Navigation";
 import Contact from "./ContactInfo";
 import logo from "../../assets/logo.png";
-import "./Footer.css";
+import "../Styles/Footer.css";
 
 const Footer = () => {
   return (

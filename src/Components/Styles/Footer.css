@@ -26,16 +26,26 @@ footer {
 .newsletter input {
   padding: 15px;
   border: none;
+  transition: all 0.5s ease;
 }
-
+.newsletter input:focus {
+  box-shadow: 0 0 10px 0 #e9c476;
+}
 .newsletter button {
   border-top-right-radius: 5px !important;
   border-bottom-right-radius: 5px !important;
   padding: 15px;
-  background: #d4af37;
+  background-color: #e9c476;
   color: #ffffff;
+  font-weight: 600;
   border: none;
   border-radius: 0;
+  transition: all 0.5s ease;
+}
+
+.newsletter button:hover {
+  box-shadow: 0 0 10px 0 #e9c476;
+  background-color: #e7b74e;
 }
 .footerContent {
   width: 100%;

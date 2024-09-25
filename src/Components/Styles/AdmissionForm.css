@@ -1,0 +1,157 @@
+/* General Form Styling */
+.admissionFormSection {
+  width: 100%;
+  margin-top: 80px;
+  padding: 30px 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mainHeading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.heading2 {
+  padding: 30px 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+/* Section Margins */
+section {
+  margin-bottom: 30px;
+}
+
+/* General Form Field Styling */
+.form-field,
+.dropdown-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="text"] {
+  font-size: 14px;
+}
+
+/* Academic Details Section */
+.academic-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-upload img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+/* SSC Details Section */
+.ssc-details,
+.application-details,
+.prequalifying-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Button Styling */
+button.submitButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #e9c476;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+}
+
+button.submitButton:hover {
+  box-shadow: 0 0 15px 0 #e9c476;
+  background-color: #e7b74e;
+}
+input,
+select {
+  outline: none;
+  border: 2px solid #e9c476;
+  transition: all 0.5s ease;
+}
+
+.form-field input:focus,
+.dropdown-field select:focus {
+  box-shadow: 0 0 15px 0 #e9c476;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .academic-details .form-field,
+  .ssc-details .form-field,
+  .application-details .form-field,
+  .application-details .dropdown-field,
+  .prequalifying-details .form-field {
+    min-width: 100%;
+  }
+  .mainHeading {
+    font-size: 1.8rem;
+  }
+  .image-upload {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainHeading {
+    font-size: 1.3rem;
+  }
+  .heading2 {
+    font-size: 1.3rem;
+  }
+  input,
+  select {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  button.submitButton {
+    font-size: 14px;
+  }
+}

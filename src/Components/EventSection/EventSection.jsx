@@ -1,5 +1,5 @@
 import React from "react";
-import "./EventSection.css";
+import "../Styles/EventSection.css";
 import UpcomingEvents from "./UpcomingEvents";
 import ImportantDatesSlider from "./ImportantDatesSlider";
 import UmcomingEventImage from "../../assets/UmcomingEventImage.jpg";

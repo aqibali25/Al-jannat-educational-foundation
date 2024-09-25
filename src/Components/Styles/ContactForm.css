@@ -47,8 +47,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   box-shadow: 0 0 15px 0 #e9c476;
-  color: #000000;
-  background-color: transparent;
+  background-color: #e7b74e;
 }
 @media (max-width: 768px) {
   .inputGroupMain {

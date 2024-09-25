@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./StatsSection.css";
+import "../Styles/StatsSection.css";
 import { initStatsAnimation } from "../../statsAnimation";
 import chartIcon1 from "../../assets/chartIcon1.png";
 import chartIcon2 from "../../assets/chartIcon2.png";
