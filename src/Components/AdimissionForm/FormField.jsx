@@ -2,9 +2,9 @@ import React from "react";
 
 const FormField = ({ label, type }) => {
   return (
-    <div className="form-field">
+    <div className="form-group col-12">
       <label>{label}</label>
-      <input type={type} />
+      <input type={type} className="form-control" />
     </div>
   );
 };

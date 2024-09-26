@@ -1,27 +1,44 @@
-import "../Styles/AdmissionForm.css";
+import React from "react";
 import AcademicDetails from "./AcademicDetails";
-import StudentSSCDetails from "./StudentSSCDetails";
 import ApplicationDetails from "./ApplicationDetails";
+import StudentSSCDetails from "./StudentSSCDetails";
 import StudentPrequalifyingDetails from "./StudentPrequalifyingDetails";
+import "../Styles/AdmissionForm.css";
 
-const AdimissionForm = () => {
+const AdmissionForm = () => {
   return (
-    <section className="admissionFormSection">
-      <form action="">
-        <h1 className="mainHeading">Scholarship Application Form</h1>
-        <AcademicDetails />
+    <div className="admissionFormSection">
+      <form>
+        <h1 className="mainHeading text-center mt-5">
+          SCHOLARSHIP APPLICATION FORM
+        </h1>
+        <section className="AdmissionFormSections">
+          <AcademicDetails />
+        </section>
+
         <h2 className="heading2 text-center">Student SSC Details</h2>
-        <StudentSSCDetails />
+        <section className="AdmissionFormSections">
+          <StudentSSCDetails />
+        </section>
+
         <h2 className="heading2 text-center">Application Details</h2>
-        <ApplicationDetails />
+        <section className="AdmissionFormSections">
+          <ApplicationDetails />
+        </section>
+
         <h2 className="heading2 text-center">Student Prequalifying Details</h2>
-        <StudentPrequalifyingDetails />
-        <button type="submit" className="submitButton">
-          Submit
-        </button>
+        <section className="AdmissionFormSections">
+          <StudentPrequalifyingDetails />
+        </section>
+
+        <div className="text-center mt-4">
+          <button type="submit" className="btn btn-primary submitButton">
+            Submit
+          </button>
+        </div>
       </form>
-    </section>
+    </div>
   );
 };
 
-export default AdimissionForm;
+export default AdmissionForm;

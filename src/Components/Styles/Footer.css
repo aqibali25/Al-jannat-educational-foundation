@@ -50,10 +50,10 @@ footer {
 .footerContent {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .footerContent img {
-  width: 400px;
+  width: 250px;
   height: 200px;
 }
 .footerContent .navigation a {
@@ -88,6 +88,7 @@ footer {
 @media (max-width: 1024px) {
   .footerContent {
     width: 70%;
+    justify-content: space-between;
   }
   .footerContent img {
     display: none;

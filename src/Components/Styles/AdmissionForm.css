@@ -2,7 +2,7 @@
 .admissionFormSection {
   width: 100%;
   margin-top: 80px;
-  padding: 30px 20px;
+  padding: 25px;
 }
 
 form {
@@ -23,13 +23,14 @@ form {
   font-weight: bold;
 }
 .heading2 {
-  padding: 30px 0;
+  padding: 20px 0 0 0;
   font-size: 1.6rem;
   font-weight: bold;
 }
 /* Section Margins */
-section {
+.AdmissionFormSections {
   margin-bottom: 30px;
+  min-height: auto;
 }
 
 /* General Form Field Styling */
@@ -42,7 +43,7 @@ section {
 
 label {
   font-size: 16px;
-  margin-bottom: 8px;
+  margin: 8px 0;
 }
 
 input,
@@ -109,13 +110,13 @@ button.submitButton:hover {
 input,
 select {
   outline: none;
-  border: 2px solid #e9c476;
+  border: 2px solid #e9c476 !important;
   transition: all 0.5s ease;
 }
 
-.form-field input:focus,
-.dropdown-field select:focus {
-  box-shadow: 0 0 15px 0 #e9c476;
+input:focus,
+select:focus {
+  box-shadow: 0 0 10px 0 #e9c476 !important;
 }
 /* Responsive Design */
 @media (max-width: 768px) {

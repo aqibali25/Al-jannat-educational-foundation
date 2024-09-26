@@ -3,6 +3,7 @@ import NavbarBrand from "./NavbarBrand";
 import NavbarToggle from "./NavbarToggle";
 import NavItem from "./NavItem";
 import "../Styles/Navbar.css";
+import NavLogo from "../../assets/NavLogo.png";
 
 const Navbar = () => {
   const navItemsArray = [
@@ -20,7 +21,7 @@ const Navbar = () => {
       className="navbar navbar-light bg-light navbar-expand-lg fixed-top"
       style={navItemStyle}
     >
-      <NavbarBrand brandName="My website" brandLink="#" />
+      <NavbarBrand brandName="Al Jannat" NavLogo={NavLogo} />
       <NavbarToggle />
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <ul className="navbar-nav navbar-right text-center">

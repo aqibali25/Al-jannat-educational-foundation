@@ -1,26 +1,55 @@
 import React from "react";
 import FormField from "./FormField";
-import DropdownField from "./DropdownField.jsx";
+import DropdownField from "./DropdownField";
 
 const ApplicationDetails = () => {
   return (
-    <div className="application-details">
-      <FormField label="Applicant Name" type="text" />
-      <FormField label="Mother's Name" type="text" />
-      <FormField label="Date of Birth" type="date" />
-      <DropdownField
-        label="Is Resident of Maharashtra"
-        options={["Yes", "No"]}
-      />
-      <FormField label="Caste Category" type="text" />
-      <FormField label="Caste" type="text" />
-      <FormField label="Sub Caste" type="text" />
-      <DropdownField label="Gender" options={["Male", "Female", "Other"]} />
-      <DropdownField label="Orphan" options={["Yes", "No"]} />
-      <DropdownField label="Disabled" options={["Yes", "No"]} />
-      <FormField label="Applicant's Annual Income" type="number" />
-      <FormField label="Total Annual Income" type="number" />
-      <FormField label="Marital Status" type="text" />
+    <div className="row">
+      <div className="col-md-12">
+        <FormField label="Applicant Name" type="text" />
+      </div>
+      <div className="col-md-12">
+        <FormField label="Mother's Name" type="text" />
+      </div>
+      <div className="col-md-6">
+        <FormField label="Date of Birth" type="date" />
+      </div>
+      <div className="col-md-6">
+        <DropdownField
+          label="Is Resident of Maharashtra"
+          options={["Yes", "No"]}
+        />
+      </div>
+      <div className="col-md-12">
+        <FormField label="Caste Category" type="text" />
+      </div>
+      <div className="col-md-6">
+        <FormField label="Caste" type="text" />
+      </div>
+      <div className="col-md-6">
+        <FormField label="Sub Caste" type="text" />
+      </div>
+      <div className="col-md-6">
+        <DropdownField label="Gender" options={["Male", "Female", "Other"]} />
+      </div>
+      <div className="col-md-3">
+        <DropdownField label="Orphan" options={["Yes", "No"]} />
+      </div>
+      <div className="col-md-3">
+        <DropdownField label="Disabled" options={["Yes", "No"]} />
+      </div>
+      <div className="col-md-6">
+        <DropdownField label="Is Applicant Salaried" options={["Yes", "No"]} />
+      </div>
+      <div className="col-md-6">
+        <FormField label="Applicant's Annual Income" type="number" />
+      </div>
+      <div className="col-md-6">
+        <FormField label="Total Annual Income" type="number" />
+      </div>
+      <div className="col-md-6">
+        <FormField label="Marital Status" type="text" />
+      </div>
     </div>
   );
 };

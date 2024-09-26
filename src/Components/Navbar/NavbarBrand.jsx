@@ -1,7 +1,11 @@
-const NavBrand = ({ brandName, brandLink }) => {
+const NavBrand = ({ brandName, NavLogo }) => {
   return (
-    <a href={brandLink} className="navbar-brand">
-      {brandName}
+    <a href="/" className="navbar-brand">
+      <img
+        src={NavLogo}
+        alt={brandName}
+        style={{ height: "60px", width: "150px" }}
+      />
     </a>
   );
 };

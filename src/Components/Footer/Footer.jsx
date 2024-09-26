@@ -2,7 +2,7 @@ import React from "react";
 import Newsletter from "./Newsletter";
 import Navigation from "./Navigation";
 import Contact from "./ContactInfo";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/FooterLogo.png";
 import "../Styles/Footer.css";
 
 const Footer = () => {

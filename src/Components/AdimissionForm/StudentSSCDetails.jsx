@@ -3,11 +3,19 @@ import FormField from "./FormField";
 
 const StudentSSCDetails = () => {
   return (
-    <div className="ssc-details">
-      <FormField label="SSC Board" type="text" />
-      <FormField label="Passing Year" type="text" />
-      <FormField label="SSC Seat Number" type="text" />
-      <FormField label="Marks Obtained" type="text" />
+    <div className="row">
+      <div className="col-md-6">
+        <FormField label="SSC Board" type="text" />
+      </div>
+      <div className="col-md-6">
+        <FormField label="Passing Year" type="text" />
+      </div>
+      <div className="col-md-6">
+        <FormField label="SSC Seat Number" type="text" />
+      </div>
+      <div className="col-md-6">
+        <FormField label="Marks Obtained" type="text" />
+      </div>
     </div>
   );
 };

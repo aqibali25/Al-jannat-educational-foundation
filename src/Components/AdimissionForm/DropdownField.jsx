@@ -2,9 +2,12 @@ import React from "react";
 
 const DropdownField = ({ label, options }) => {
   return (
-    <div className="dropdown-field">
+    <div className="form-group">
       <label>{label}</label>
-      <select>
+      <select className="form-control">
+        <option value="" disabled selected>
+          --select--
+        </option>
         {options.map((option, index) => (
           <option key={index} value={option}>
             {option}
