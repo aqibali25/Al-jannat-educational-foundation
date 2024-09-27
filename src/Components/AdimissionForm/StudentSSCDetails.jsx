@@ -8,7 +8,7 @@ const StudentSSCDetails = () => {
         <FormField label="SSC/HSC Board" type="text" />
       </div>
       <div className="col-md-6">
-        <FormField label="Passing Year" type="text" />
+        <FormField label="Passing Year (9th, 10th, 11th, 12th)" type="text" />
       </div>
       <div className="col-md-6">
         <FormField label="SSC/HSC Seat Number" type="text" />
