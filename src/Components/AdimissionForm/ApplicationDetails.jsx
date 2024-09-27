@@ -16,24 +16,24 @@ const ApplicationDetails = () => {
       </div>
       <div className="col-md-6">
         <DropdownField
-          label="Is Resident of Maharashtra"
-          options={["Yes", "No"]}
+          label="Resident of"
+          options={["Ghotki", "Khanpur", "Mirpur", "Ubauro"]}
         />
       </div>
       <div className="col-md-12">
-        <FormField label="Caste Category" type="text" />
+        <FormField label="F.CNIC" type="Number" />
       </div>
       <div className="col-md-6">
         <FormField label="Caste" type="text" />
       </div>
       <div className="col-md-6">
-        <FormField label="Sub Caste" type="text" />
+        <FormField label="Religion" type="text" />
       </div>
       <div className="col-md-6">
         <DropdownField label="Gender" options={["Male", "Female", "Other"]} />
       </div>
       <div className="col-md-3">
-        <DropdownField label="Orphan" options={["Yes", "No"]} />
+        <FormField label="Age" type="Text" />
       </div>
       <div className="col-md-3">
         <DropdownField label="Disabled" options={["Yes", "No"]} />
