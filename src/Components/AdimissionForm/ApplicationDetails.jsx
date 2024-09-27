@@ -17,7 +17,7 @@ const ApplicationDetails = () => {
       <div className="col-md-6">
         <DropdownField
           label="Resident of"
-          options={["Ghotki", "Khanpur", "Mirpur", "Ubauro"]}
+          options={["Ghotki", "Khanpur", "Mirpur", "Daharki", "Ubauro"]}
         />
       </div>
       <div className="col-md-12">
