@@ -9,7 +9,7 @@ const ApplicationDetails = () => {
         <FormField label="Applicant Name" type="text" />
       </div>
       <div className="col-md-12">
-        <FormField label="Mother's Name" type="text" />
+        <FormField label="Father's Name" type="text" />
       </div>
       <div className="col-md-6">
         <FormField label="Date of Birth" type="date" />
@@ -21,7 +21,7 @@ const ApplicationDetails = () => {
         />
       </div>
       <div className="col-md-12">
-        <FormField label="F.CNIC" type="Number" />
+        <FormField label="Father's CNIC" type="Number" />
       </div>
       <div className="col-md-6">
         <FormField label="Caste" type="text" />
@@ -33,16 +33,16 @@ const ApplicationDetails = () => {
         <DropdownField label="Gender" options={["Male", "Female", "Other"]} />
       </div>
       <div className="col-md-3">
-        <FormField label="Age" type="Text" />
+        <FormField label="Age" type="text" />
       </div>
       <div className="col-md-3">
         <DropdownField label="Disabled" options={["Yes", "No"]} />
       </div>
       <div className="col-md-6">
-        <DropdownField label="Is Applicant Salaried" options={["Yes", "No"]} />
+        <FormField label="Address" type="text" />
       </div>
       <div className="col-md-6">
-        <FormField label="Applicant's Annual Income" type="number" />
+        <FormField label="Mobile No:" type="number" />
       </div>
       <div className="col-md-6">
         <FormField label="Total Annual Income" type="number" />
