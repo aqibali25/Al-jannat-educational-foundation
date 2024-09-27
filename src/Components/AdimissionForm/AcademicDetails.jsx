@@ -12,7 +12,7 @@ const AcademicDetails = () => {
         <FormField label="Academic Year" type="text" />
         <FormField label="Application date" type="date" />
         <FormField label="College Name" type="text" />
-        <FormField label="Course Name" type="text" />
+        <FormField label="Class" type="text" />
       </div>
     </div>
   );
