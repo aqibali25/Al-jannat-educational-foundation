@@ -16,7 +16,7 @@ const AdmissionForm = () => {
           <AcademicDetails />
         </section>
 
-        <h2 className="heading2 text-center">Student SSC Details</h2>
+        <h2 className="heading2 text-center">Student SSC/HSC Details</h2>
         <section className="AdmissionFormSections">
           <StudentSSCDetails />
         </section>
