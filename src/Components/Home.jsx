@@ -11,15 +11,15 @@ const Home = () => {
       <section>
         <Slider />
       </section>
-      <section id="wellcomeSection">
+      <section id="about">
         <WelcomeSection></WelcomeSection>
       </section>
-      <section id="coursesSection">
+      <section id="academics">
         <CourseContainer></CourseContainer>
       </section>
       <EventSection />
       <StatsSection />
-      <section id="contactSection">
+      <section id="contact">
         <ContactForm />
       </section>
     </>

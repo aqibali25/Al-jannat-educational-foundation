@@ -8,10 +8,10 @@ import NavLogo from "../../assets/NavLogo.png";
 const Navbar = () => {
   const navItemsArray = [
     { name: "Home", link: "#" },
-    { name: "About", link: "#wellcomeSection" },
-    { name: "Academics", link: "#coursesSection" },
+    { name: "About", link: "#about" },
+    { name: "Academics", link: "#academics" },
     { name: "Admission", link: "#" },
-    { name: "Contact", link: "#contactSection" },
+    { name: "Contact", link: "#contact" },
   ];
   const navItemStyle = {
     padding: "15px",
