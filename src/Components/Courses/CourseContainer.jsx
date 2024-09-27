@@ -1,81 +1,86 @@
 import CourseCards from "./CourseCards";
 import "../Styles/CourseContainer.css";
 
-import courseImage1 from "../../assets/courseImage1.jpg";
-import courseImage2 from "../../assets/courseImage2.jpg";
-import courseImage3 from "../../assets/courseImage3.jpg";
-import courseImage4 from "../../assets/courseImage4.jpg";
+import courseImage1 from "../../assets/CoursesImage/coursesImage1.jpg";
+import courseImage2 from "../../assets/CoursesImage/coursesImage2.jpg";
+import courseImage3 from "../../assets/CoursesImage/coursesImage3.jpg";
+import courseImage4 from "../../assets/CoursesImage/coursesImage4.jpg";
+import courseImage5 from "../../assets/CoursesImage/coursesImage5.jpg";
+import courseImage6 from "../../assets/CoursesImage/coursesImage6.jpg";
+import courseImage7 from "../../assets/CoursesImage/coursesImage7.jpg";
+import courseImage8 from "../../assets/CoursesImage/coursesImage8.jpg";
+import courseImage9 from "../../assets/CoursesImage/coursesImage9.jpg";
+import courseImage10 from "../../assets/CoursesImage/coursesImage10.jpg";
+
 const CourseContainer = () => {
   const courses = [
     {
       id: 1,
-      title: "Card title 1",
+      title: "Merit Scholarship",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "Awarded to students with outstanding academic achievements.",
       imgSrc: courseImage1,
     },
     {
       id: 2,
-      title: "Card title 2",
-      description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      title: "Need-Based Scholarship",
+      description: "Provided to students who demonstrate financial need.",
       imgSrc: courseImage2,
     },
     {
       id: 3,
-      title: "Card title 3",
+      title: "Leadership Scholarship",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "Recognizes students who exhibit exceptional leadership skills.",
       imgSrc: courseImage3,
     },
     {
       id: 4,
-      title: "Card title 4",
+      title: "Community Service Scholarship",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "Honors students who demonstrate a strong commitment to community service.",
       imgSrc: courseImage4,
     },
     {
       id: 5,
-      title: "Card title 5",
+      title: "Talent Scholarship",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      imgSrc: courseImage4,
+        "Supports students with exceptional talents in arts, sports, or other areas",
+      imgSrc: courseImage5,
     },
     {
       id: 6,
-      title: "Card title 6",
+      title: " International Student Scholarship",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      imgSrc: courseImage4,
+        "Assists international students in pursuing their education.",
+      imgSrc: courseImage6,
     },
     {
       id: 7,
-      title: "Card title 7",
+      title: "Graduate Scholarship",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      imgSrc: courseImage4,
+        "Helps students pursuing higher education or postgraduate studies.",
+      imgSrc: courseImage7,
     },
     {
       id: 8,
-      title: "Card title 8",
-      description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      imgSrc: courseImage4,
+      title: "Undergraduate Scholarship",
+      description: "Supports students pursuing their undergraduate degree.",
+      imgSrc: courseImage8,
     },
     {
       id: 9,
-      title: "Card title 9",
+      title: "Vocational Scholarship",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      imgSrc: courseImage4,
+        "Provides funding for students pursuing vocational or technical education.",
+      imgSrc: courseImage9,
     },
     {
       id: 10,
-      title: "Card title 10",
+      title: "Disability Scholarship",
       description:
-        "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      imgSrc: courseImage4,
+        "Assists students with disabilities in achieving their educational goals.",
+      imgSrc: courseImage10,
     },
   ];
   return (

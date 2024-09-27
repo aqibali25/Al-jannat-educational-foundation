@@ -2,7 +2,7 @@ import EventSection from "./EventSection/EventSection";
 import StatsSection from "./StatsSection/StatsSection";
 import ContactForm from "./ContactForm/ContactForm";
 import Slider from "./Slider/Slider";
-import CourseContainer from "./Carousel/CourseContainer";
+import CourseContainer from "./Courses/CourseContainer";
 import WelcomeSection from "./WellcomeSection";
 
 const Home = () => {
