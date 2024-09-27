@@ -1,6 +1,5 @@
 import Slide from "./Slide";
 import CarouselIndicators from "./CarouselIndicators";
-import CarouselControls from "./CarouselControls";
 import "../Styles/slider.css";
 
 import slider1 from "../../assets/slider-1.jpg";
@@ -39,7 +38,7 @@ processes. Proactively drive.`,
 
 const Slider = () => {
   const SliderStyles = {
-    marginTop: "70px",
+    marginTop: "80px",
   };
 
   return (
@@ -54,7 +53,6 @@ const Slider = () => {
           <Slide key={slide.id} {...slide} />
         ))}
       </div>
-      <CarouselControls />
     </div>
   );
 };

@@ -12,6 +12,10 @@
   font-weight: 500;
 }
 @media (max-width: 768px) {
+  .imageSlider,
+  .imageSlider img {
+    height: 330px;
+  }
   .carousel-caption {
     top: 45%;
   }
@@ -22,24 +26,14 @@
     font-size: 0.9rem;
   }
 }
-@media (max-width: 685px) {
-  .imageSlider .carousel-indicators button[type="button"] {
-    background-color: #000000;
-  }
-}
 @media (max-width: 580px) {
   .carousel-caption {
-    top: 35%;
+    top: 48%;
   }
   .carousel-caption h1 {
     font-size: 1.2rem;
   }
   .carousel-caption p {
     font-size: 0.6rem;
-  }
-}
-@media (max-width: 375px) {
-  .carousel-caption {
-    display: none;
   }
 }
