@@ -7,10 +7,10 @@ import NavLogo from "../../assets/NavLogo.png";
 
 const Navbar = () => {
   const navItemsArray = [
-    { name: "Home", link: "#" },
+    { name: "Home", link: "/" },
     { name: "About", link: "#about" },
     { name: "Academics", link: "#academics" },
-    { name: "Admission", link: "#" },
+    { name: "Admission", link: "Al-Jannat-Educational-Foundation/admission" },
     { name: "Contact", link: "#contact" },
   ];
   const navItemStyle = {
