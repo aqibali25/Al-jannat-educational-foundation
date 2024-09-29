@@ -8,10 +8,38 @@ import NavLogo from "../../assets/NavLogo.png";
 const Navbar = () => {
   const navItemsArray = [
     { name: "Home", link: "/" },
-    { name: "About", link: "#about" },
-    { name: "Academics", link: "#academics" },
-    { name: "Admission", link: "Al-Jannat-Educational-Foundation/admission" },
-    { name: "Contact", link: "#contact" },
+    {
+      name: "About",
+      link: window.location.pathname.includes(
+        "Al-Jannat-Educational-Foundation/admission"
+      )
+        ? "/Al-Jannat-Educational-Foundation/#about"
+        : "#about",
+    },
+    {
+      name: "Academics",
+      link: window.location.pathname.includes(
+        "Al-Jannat-Educational-Foundation/admission"
+      )
+        ? "/Al-Jannat-Educational-Foundation/#academics"
+        : "#academics",
+    },
+    {
+      name: "Admission",
+      link: window.location.pathname.includes(
+        "Al-Jannat-Educational-Foundation/admission"
+      )
+        ? ""
+        : "/Al-Jannat-Educational-Foundation/admission",
+    },
+    {
+      name: "Contact",
+      link: window.location.pathname.includes(
+        "Al-Jannat-Educational-Foundation/admission"
+      )
+        ? "/Al-Jannat-Educational-Foundation/#contact"
+        : "#contact",
+    },
   ];
   const navItemStyle = {
     padding: "15px",
