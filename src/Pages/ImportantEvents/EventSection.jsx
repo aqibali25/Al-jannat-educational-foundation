@@ -1,7 +1,7 @@
 import React from "react";
-import "../Styles/EventSection.css";
-import UpcomingEvents from "./UpcomingEvents";
-import ImportantDatesSlider from "./ImportantDatesSlider";
+import "./EventSection.css";
+import UpcomingEvents from "../../Components/EventSection/UpcomingEvents";
+import ImportantDatesSlider from "../../Components/EventSection/ImportantDatesSlider";
 import UmcomingEventImage from "../../assets/UmcomingEventImage.jpg";
 
 const EventDates = [

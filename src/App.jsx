@@ -1,8 +1,8 @@
 import Navbar from "./Components/Navbar/Navbar";
 import "./Components/Styles/App.css";
-import Home from "./Components/Home";
+import Home from "./Pages/Home/Home";
 import Footer from "./Components/Footer/Footer";
-import AdmissionForm from "./Components/AdimissionForm/AdimissionForm";
+import AdmissionForm from "./Pages/Admission/AdimissionForm";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {

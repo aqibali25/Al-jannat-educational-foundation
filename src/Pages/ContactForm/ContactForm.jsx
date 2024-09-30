@@ -1,6 +1,6 @@
-import FormInput from "./FormInput";
-import FormTextArea from "./FormTextArea";
-import "../Styles/ContactForm.css";
+import FormInput from "../../Components/ContactForm/FormInput";
+import FormTextArea from "../../Components/ContactForm/FormTextArea";
+import "./ContactForm.css";
 
 const ContactForm = () => {
   return (

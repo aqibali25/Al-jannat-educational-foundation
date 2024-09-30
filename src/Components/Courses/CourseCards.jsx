@@ -1,5 +1,4 @@
 import Card from "./Card";
-import "../Styles/CourseContainer.css";
 
 const CourseCards = ({ courses }) => {
   return (

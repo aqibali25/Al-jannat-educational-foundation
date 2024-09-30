@@ -1,5 +1,5 @@
-import CourseCards from "./CourseCards";
-import "../Styles/CourseContainer.css";
+import CourseCards from "../../Components/Courses/CourseCards";
+import "./CourseContainer.css";
 
 import courseImage1 from "../../assets/CoursesImage/coursesImage1.jpg";
 import courseImage2 from "../../assets/CoursesImage/coursesImage2.jpg";

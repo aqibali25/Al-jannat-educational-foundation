@@ -1,5 +1,3 @@
-import "../Styles/CourseContainer.css";
-
 const Card = ({ course }) => {
   return (
     <div className="col-md-3 courseCard">
