@@ -1,0 +1,39 @@
+.carousel-caption {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(0%, -50%);
+}
+.imageSlider .carousel-indicators button[type="button"] {
+  background-color: #ffffff;
+}
+.carousel-caption p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .imageSlider,
+  .imageSlider img {
+    height: 330px;
+  }
+  .carousel-caption {
+    top: 45%;
+  }
+  .carousel-caption h1 {
+    font-size: 1.8rem;
+  }
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 580px) {
+  .carousel-caption {
+    top: 48%;
+  }
+  .carousel-caption h1 {
+    font-size: 1.2rem;
+  }
+  .carousel-caption p {
+    font-size: 0.6rem;
+  }
+}

@@ -1,0 +1,112 @@
+footer {
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 100px;
+  margin-top: 40px;
+}
+.newsletter {
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter h1 {
+  font-size: 2.2rem;
+}
+
+.newsletter input {
+  padding: 15px;
+  border: none;
+  transition: all 0.5s ease;
+}
+.newsletter input:focus {
+  box-shadow: 0 0 10px 0 #e9c476;
+}
+.newsletter button {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  padding: 15px;
+  background-color: #e9c476;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  transition: all 0.5s ease;
+}
+
+.newsletter button:hover {
+  box-shadow: 0 0 10px 0 #e9c476;
+  background-color: #e7b74e;
+}
+.footerContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.footerContent img {
+  width: 250px;
+  height: 200px;
+}
+.footerContent .navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.footerContent .navigation a:hover {
+  color: #d4af37;
+}
+.contact address {
+  font-size: 1.2rem;
+}
+.contact a {
+  width: 20px;
+  margin: 0 10px;
+  color: #fff;
+}
+.contact a i {
+  transition: all 0.5s ease-in-out;
+  font-size: 25px;
+}
+.contact a:hover .fa-facebook {
+  color: #1877f2;
+}
+.contact a:hover .fa-twitter {
+  color: #1da1f2;
+}
+.contact a:hover .fa-linkedin {
+  color: #0077b5;
+}
+@media (max-width: 1024px) {
+  .footerContent {
+    width: 70%;
+    justify-content: space-between;
+  }
+  .footerContent img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .footerContent {
+    width: 90%;
+  }
+}
