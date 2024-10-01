@@ -4,7 +4,7 @@ const DropdownField = ({ label, options }) => {
   return (
     <div className="form-group">
       <label>{label}</label>
-      <select className="form-control">
+      <select className="form-control" required>
         <option value="" disabled selected>
           --select--
         </option>

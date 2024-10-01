@@ -40,6 +40,7 @@ const ImageInput = () => {
         onChange={handleImageChange}
         ref={fileInputRef}
         style={{ display: "none" }}
+        required
       />
     </div>
   );

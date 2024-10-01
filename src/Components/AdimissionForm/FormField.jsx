@@ -1,10 +1,16 @@
 import React from "react";
 
-const FormField = ({ label, type }) => {
+const FormField = ({ label, type, value, onChange }) => {
   return (
-    <div className="form-group col-12">
+    <div className="form-group">
       <label>{label}</label>
-      <input type={type} className="form-control" />
+      <input
+        type={type}
+        className="form-control"
+        value={value} // Bind value to formData
+        onChange={onChange} // Handle change properly
+        required
+      />
     </div>
   );
 };
