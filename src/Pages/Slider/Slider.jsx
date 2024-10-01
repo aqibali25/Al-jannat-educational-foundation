@@ -10,16 +10,13 @@ const slides = [
   {
     id: 0,
     src: slider1,
-    label: "Welcome to Al Jannat Education Foundation",
-    description: `Chairman Message:
+    label: "Al Jannat Scholarship",
+    description: `Empowering Education, Enriching Futures
 
-Assalamu alaikum (Peace be upon you)
 
-We are thrilled to welcome you to the Al Jannat Education Foundation, a non-profit organization dedicated to empowering students and communities through education. Our mission is to provide access to quality education, foster leadership, and promote community service. We invite you to be part of our community of scholars, mentors, and change-makers. Together, let's empower education and enrich futures.
-
-Thank you for your interest in Al Jannat Education Foundation. We look forward to serving you.
-
-Wasalaam (Peace).
+The Al Jannat Scholarship is a prestigious award designed to support and empower talented students in pursuing their academic dreams. 
+Established by the Al Jannat Education Foundation, this scholarship aims to provide financial assistance and recognition to deserving 
+individuals who demonstrate academic excellence, leadership potential, and a commitment to making a positive impact in their communities.
 `,
     isActive: true,
   },
