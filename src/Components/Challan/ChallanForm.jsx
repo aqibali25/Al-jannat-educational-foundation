@@ -1,6 +1,6 @@
 import React from "react";
-import "../Styles/ChallanForm.css";
 import logoImage from "./assets/Al-jannat-educational-foundation.jpg";
+import mcbLogo from "./assets/MCB-Bank-Logo-.png";
 
 const ChallanForm = ({ label, copyTag }) => {
   return (
@@ -12,10 +12,15 @@ const ChallanForm = ({ label, copyTag }) => {
         </div>
         <div className="foundation-details">
           <img src={logoImage} alt="Logo" className="logo" />
-          <h2>AL-JANNAT EDUCATION FOUNDATION</h2>
-          <p>Address: Main to Block Near University of Kids School Okada</p>
-          <p>Contact: 03xx-xxxxxxx</p>
-          <p>Email: ajannateducationfoundation@gmail.com</p>
+          <div className="foundationDetails-inner">
+            <h2>AL-JANNAT EDUCATION FOUNDATION</h2>
+            <p>Address: Main to Block Near University of Kids School Ghotki</p>
+            <p>Contact: 0310 3353003</p>
+            <p>Email: ajannateducationfoundation@gmail.com</p>
+            <p>MCB bank Syed Sajjad Ali Shah (Chairmain)</p>
+            <p>Account no: 0952771761008513</p>
+          </div>
+          <img src={mcbLogo} alt="MCB Logo" className="logo" />
         </div>
       </div>
 
