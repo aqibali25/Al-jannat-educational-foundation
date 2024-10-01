@@ -16,7 +16,7 @@ const Footer = () => {
         <Navigation />
         <Contact />
       </div>
-      <div className="text-center mt-3">
+      <div className="text-center footerRights  mt-3">
         <p>2024 © copyright - All rights reserved.</p>
       </div>
     </footer>

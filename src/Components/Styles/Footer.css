@@ -65,7 +65,7 @@ footer {
   color: #d4af37;
 }
 .contact address {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .contact a {
   width: 20px;
@@ -108,5 +108,16 @@ footer {
 @media (max-width: 425px) {
   .footerContent {
     width: 90%;
+  }
+  .contact address,
+  .footerContent .navigation a {
+    font-size: 0.75rem;
+  }
+  .navigation h2,
+  .contact h2 {
+    font-size: 1.2rem;
+  }
+  .footerRights {
+    font-size: 0.8rem;
   }
 }

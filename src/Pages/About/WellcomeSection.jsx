@@ -4,7 +4,7 @@ const WelcomeSection = () => {
     padding: "15px ",
   };
   const styleHeading = {
-    fontSize: "1.8rem",
+    fontSize: "1.5rem",
     fontWeight: "700",
   };
   return (
