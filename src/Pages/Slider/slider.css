@@ -11,29 +11,51 @@
   font-size: 1rem;
   font-weight: 500;
 }
-@media (max-width: 768px) {
-  .imageSlider,
-  .imageSlider img {
-    height: 330px;
-  }
+@media (max-width: 1024px) {
   .carousel-caption {
     top: 45%;
   }
-  .carousel-caption h1 {
+  .carousel-caption .heading {
     font-size: 1.8rem;
+    font-weight: 600;
+  }
+  .carousel-caption .paraText {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 880px) {
+  imageSlider,
+  .imageSlider img {
+    height: 380px;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-caption .heading {
+    font-size: 1.5rem;
   }
   .carousel-caption p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }
 @media (max-width: 580px) {
   .carousel-caption {
-    top: 48%;
+    top: 42%;
   }
-  .carousel-caption h1 {
-    font-size: 1.2rem;
+  .carousel-caption .heading {
+    font-size: 1.5rem;
   }
-  .carousel-caption p {
-    font-size: 0.6rem;
+  .carousel-caption .paraText {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 410px) {
+  .carousel-caption {
+    top: 40%;
+  }
+  .carousel-caption .heading {
+    font-size: 1.3rem;
+  }
+  .carousel-caption .paraText {
+    font-size: 0.7rem;
   }
 }

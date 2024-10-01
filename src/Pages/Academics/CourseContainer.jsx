@@ -23,7 +23,7 @@ const CourseContainer = () => {
     },
     {
       id: 2,
-      title: "Need-Based Scholarship",
+      title: "Laptop scholarship program",
       description: "Provided to students who demonstrate financial need.",
       imgSrc: courseImage2,
     },
