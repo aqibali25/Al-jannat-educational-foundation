@@ -10,14 +10,21 @@ const WelcomeSection = () => {
   return (
     <div className="container text-center my-5">
       <h1 className="heading" style={styleHeading}>
-        Welcome
+      Welcome to Al Jannat Education Foundation
+
+
       </h1>
       <p className="lead" style={stylepara}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries.
+      Chairman Message:
+
+Assalamu alaikum (Peace be upon you)
+
+We are thrilled to welcome you to the Al Jannat Education Foundation, a non-profit organization dedicated to empowering students and communities through education. Our mission is to provide access to quality education, foster leadership, and promote community service. We invite you to be part of our community of scholars, mentors, and change-makers. Together, let's empower education and enrich futures.
+
+Thank you for your interest in Al Jannat Education Foundation. We look forward to serving you.
+
+Wasalaam (Peace).
+
       </p>
     </div>
   );

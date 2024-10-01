@@ -5,11 +5,11 @@ const ContactInfo = () => {
       <address>
         Al Jannat Educational Foundation
         <br />
-        Albany, NY, USA. 11001
+        Hussain Beli road near university of kids school
         <br />
-        Email: info@unisco.com
+        Email: aljannateducationfoundation@gmail.com
         <br />
-        Phone: +91 555 668 986
+        Phone: +92 3103353003
       </address>
       <div>
         <a href="#">
