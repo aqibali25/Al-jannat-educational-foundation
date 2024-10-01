@@ -3,25 +3,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/ImageInput.css";
 
-const fileInputRef = React.createRef();
-const imagePreviewRef = React.createRef();
+const ImageInput = ({ onImageSelect }) => {
+  const fileInputRef = React.createRef();
+  const imagePreviewRef = React.createRef();
 
-const handleImageChange = () => {
-  const file = fileInputRef.current.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const imgTag = document.createElement("img");
-      imgTag.src = e.target.result;
-      imgTag.alt = "Uploaded Image";
-      imagePreviewRef.current.innerHTML = "";
-      imagePreviewRef.current.appendChild(imgTag);
-    };
-    reader.readAsDataURL(file);
-  }
-};
+  const handleImageChange = () => {
+    const file = fileInputRef.current.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const imgTag = document.createElement("img");
+        imgTag.src = e.target.result;
+        imgTag.alt = "Uploaded Image";
+        imagePreviewRef.current.innerHTML = "";
+        imagePreviewRef.current.appendChild(imgTag);
 
-const ImageInput = () => {
+        // Send the image data (base64 string) to the parent component
+        onImageSelect(e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <div className="image-input-container">
       <label htmlFor="file-input">

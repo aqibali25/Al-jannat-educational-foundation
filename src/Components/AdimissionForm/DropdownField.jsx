@@ -1,11 +1,16 @@
 import React from "react";
 
-const DropdownField = ({ label, options }) => {
+const DropdownField = ({ label, value, options, onChange }) => {
   return (
     <div className="form-group">
       <label>{label}</label>
-      <select className="form-control" required>
-        <option value="" disabled selected>
+      <select
+        className="form-control"
+        value={value}
+        onChange={onChange}
+        required
+      >
+        <option value="" disabled>
           --select--
         </option>
         {options.map((option, index) => (
