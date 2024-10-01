@@ -755,7 +755,7 @@ const AdmissionForm = () => {
               className="col-md-4 text-center"
               style={{ display: "contents" }}
             >
-              <ImageInput nImageSelect={handleImageSelect} />
+              <ImageInput onImageSelect={handleImageSelect} />
             </div>
             <div className="col-md-8">
               <FormField
