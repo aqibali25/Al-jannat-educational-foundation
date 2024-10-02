@@ -23,13 +23,13 @@ const AdmissionForm = () => {
     fatherCnic: "",
     caste: "",
     religion: "",
-    gender: "",
+    gender: "Male", // Default value
     age: "",
-    disabled: "",
+    disabled: "No", // Default value
     address: "",
     mobile: "",
     annualIncome: "",
-    maritalStatus: "",
+    maritalStatus: "Single", // Default value
     lastSchool: "",
     lastExamPassed: "",
     lastExamYear: "",
@@ -50,8 +50,8 @@ const AdmissionForm = () => {
     setFormData((prevFormData) => ({ ...prevFormData, [key]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     const newChallanNumber = generateChallanNo();
     setChallanNumber(newChallanNumber);
     setIsSubmitted(true);
