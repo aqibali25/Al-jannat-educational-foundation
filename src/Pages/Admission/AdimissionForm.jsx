@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toWords } from "number-to-words";
 import FormField from "../../Components/AdimissionForm/FormField";
 import ImageInput from "../../Components/AdimissionForm/ImageInput";
 import DropdownField from "../../Components/AdimissionForm/DropdownField";
@@ -56,7 +57,6 @@ const AdmissionForm = () => {
     setIsSubmitted(true);
   };
 
-  // Function to generate a unique challan number
   const generateChallanNo = () => {
     let lastChallan = localStorage.getItem("lastChallanNumber");
     if (!lastChallan) {
@@ -242,6 +242,10 @@ const AdmissionForm = () => {
             <strong>College Name:</strong>
             <p class="input-field">${formData.collegeName || "N/A"}</p>
           </label>
+          <label>
+            <strong>Class:</strong>
+            <p class="input-field">${formData.class || "N/A"}</p>
+          </label>
         </div>
         <div class="image-input-container">
           ${
@@ -383,6 +387,7 @@ const AdmissionForm = () => {
       classValue === "eight"
         ? 1000
         : 1200;
+
     const paymentAmount = Number(payment);
     const loanAmount = Number(formData.loan || 0);
     const scholarshipFee = Number(formData.scholarshipProcessingFee || 0);
@@ -396,6 +401,9 @@ const AdmissionForm = () => {
       scholarshipFee +
       scholarshipsAmount -
       discountAmount;
+
+    const receivableInWords = toWords(totalReceivable);
+
     const challanData = {
       copyTags: [
         { label: 1, copyTag: "Student" },
@@ -412,9 +420,9 @@ const AdmissionForm = () => {
       discount: "",
       scholarships: "",
       loan: "",
-      payment: `${payment}`,
-      totalReceivable: `${totalReceivable}`,
-      inWords: "One Thousand Five Hundred ",
+      payment: payment,
+      totalReceivable: totalReceivable,
+      inWords: receivableInWords,
     };
 
     const previewWindow = window.open("", "_blank");
@@ -870,10 +878,11 @@ const AdmissionForm = () => {
               />
             </div>
             <div className="col-md-6">
-              <FormField
+              <DropdownField
                 label="Resident Of"
                 type="text"
                 value={formData.residentOf}
+                options={["Ghotki", "Khanpur", "Mirpur", "Daharki", "Ubauro"]}
                 onChange={(e) =>
                   handleInputChange("residentOf", e.target.value)
                 }
