@@ -38,10 +38,35 @@
 .card {
   position: relative;
   cursor: pointer;
-  transition: transform 0.4s ease-in-out;
 }
-.card:hover {
-  transform: scale(1.03);
+.CoursesButtons {
+  max-height: 0;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
+
+.card:hover .CoursesButtons {
+  max-height: 100px;
+}
+
+.CoursesButtons button {
+  border: none;
+  border-radius: 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.CoursesButtons button:hover {
+  background-color: #e9c476;
 }
 .card .availableBox {
   position: absolute;
@@ -53,16 +78,21 @@
   align-items: center;
   min-width: 60px;
   height: 30px;
-  background-color: #e9c576;
-  color: white;
   text-align: center;
   padding: 10px;
 }
-
+.isAvailable {
+  background-color: #0bcf05;
+}
+.notAcailable {
+  opacity: 0.8;
+  background-color: #e10000;
+}
 .availableBox span {
   letter-spacing: 1px;
   font-size: 0.6rem;
-  /* font-weight: bold; */
+  font-weight: bold;
+  color: #ffffff;
 }
 .btnCourses {
   font-size: 1rem;
