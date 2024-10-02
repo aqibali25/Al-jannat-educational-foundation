@@ -369,6 +369,33 @@ const AdmissionForm = () => {
   const printChallan = (event) => {
     event.preventDefault();
 
+    const classValue = formData.class.toString().toLowerCase();
+
+    const payment =
+      classValue === "6" ||
+      classValue === "6th" ||
+      classValue === "six" ||
+      classValue === "7" ||
+      classValue === "7th" ||
+      classValue === "seven" ||
+      classValue === "8" ||
+      classValue === "8th" ||
+      classValue === "eight"
+        ? 1000
+        : 1200;
+    const paymentAmount = Number(payment);
+    const loanAmount = Number(formData.loan || 0);
+    const scholarshipFee = Number(formData.scholarshipProcessingFee || 0);
+    const scholarshipsAmount = Number(formData.scholarships || 0);
+    const discountAmount = Number(formData.discount || 0);
+
+    // Compute total receivable
+    const totalReceivable =
+      paymentAmount +
+      loanAmount +
+      scholarshipFee +
+      scholarshipsAmount -
+      discountAmount;
     const challanData = {
       copyTags: [
         { label: 1, copyTag: "Student" },
@@ -385,8 +412,8 @@ const AdmissionForm = () => {
       discount: "",
       scholarships: "",
       loan: "",
-      payment: "1500",
-      totalReceivable: "1500",
+      payment: `${payment}`,
+      totalReceivable: `${totalReceivable}`,
       inWords: "One Thousand Five Hundred ",
     };
 
@@ -728,7 +755,7 @@ const AdmissionForm = () => {
               className="col-md-4 text-center"
               style={{ display: "contents" }}
             >
-              <ImageInput nImageSelect={handleImageSelect} />
+              <ImageInput onImageSelect={handleImageSelect} />
             </div>
             <div className="col-md-8">
               <FormField
