@@ -15,10 +15,10 @@ const Card = ({ course, onClick }) => {
           <p className="card-text">{course.description}</p>
         </div>
         <div className="CoursesButtons">
-          <button className="btn btn-primary" onClick={onClick}>
+          <button className="btnEnroll" onClick={onClick}>
             Enroll Now
           </button>
-          <button className="btn btn-info">Advertisement</button>
+          <button className="btnAdv">Advertisement</button>
         </div>
       </div>
     </div>
