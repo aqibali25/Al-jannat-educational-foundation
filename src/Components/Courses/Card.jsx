@@ -1,4 +1,4 @@
-const Card = ({ course, onClick }) => {
+const Card = ({ course, handleEnrollBtn, handleAdvBtn }) => {
   return (
     <div className="col-md-3 courseCard">
       <div className="card mb-4 shadow-sm">
@@ -15,10 +15,12 @@ const Card = ({ course, onClick }) => {
           <p className="card-text">{course.description}</p>
         </div>
         <div className="CoursesButtons">
-          <button className="btnEnroll" onClick={onClick}>
+          <button className="btnEnroll" onClick={handleEnrollBtn}>
             Enroll Now
           </button>
-          <button className="btnAdv">Advertisement</button>
+          <button className="btnAdv" onClick={handleAdvBtn}>
+            Advertisement
+          </button>
         </div>
       </div>
     </div>

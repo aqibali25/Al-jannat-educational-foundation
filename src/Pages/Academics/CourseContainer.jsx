@@ -12,6 +12,17 @@ import courseImage8 from "../../assets/CoursesImage/coursesImage8.jpg";
 import courseImage9 from "../../assets/CoursesImage/coursesImage9.jpg";
 import courseImage10 from "../../assets/CoursesImage/coursesImage10.jpg";
 
+import advertisement1 from "../../assets/CoursesImage/coursesImage1.jpg";
+import advertisement2 from "../../assets/CoursesImage/coursesImage2.jpg";
+import advertisement3 from "../../assets/CoursesImage/coursesImage3.jpg";
+import advertisement4 from "../../assets/CoursesImage/coursesImage4.jpg";
+import advertisement5 from "../../assets/CoursesImage/coursesImage5.jpg";
+import advertisement6 from "../../assets/CoursesImage/coursesImage6.jpg";
+import advertisement7 from "../../assets/CoursesImage/coursesImage7.jpg";
+import advertisement8 from "../../assets/CoursesImage/coursesImage8.jpg";
+import advertisement9 from "../../assets/CoursesImage/coursesImage9.jpg";
+import advertisement10 from "../../assets/CoursesImage/coursesImage10.jpg";
+
 const CourseContainer = () => {
   const courses = [
     {
@@ -21,6 +32,7 @@ const CourseContainer = () => {
         "Awarded to students with outstanding academic achievements.",
       imgSrc: courseImage1,
       available: true,
+      advertisement: advertisement1,
     },
     {
       id: 2,
@@ -28,6 +40,7 @@ const CourseContainer = () => {
       description: "Provided to students who demonstrate financial need.",
       imgSrc: courseImage2,
       available: false,
+      advertisement: advertisement2,
     },
     {
       id: 3,
@@ -36,6 +49,7 @@ const CourseContainer = () => {
         "Recognizes students who exhibit exceptional leadership skills.",
       imgSrc: courseImage3,
       available: false,
+      advertisement: advertisement3,
     },
     {
       id: 4,
@@ -44,6 +58,7 @@ const CourseContainer = () => {
         "Honors students who demonstrate a strong commitment to community service.",
       imgSrc: courseImage4,
       available: false,
+      advertisement: advertisement4,
     },
     {
       id: 5,
@@ -52,6 +67,7 @@ const CourseContainer = () => {
         "Supports students with exceptional talents in arts, sports, or other areas",
       imgSrc: courseImage5,
       available: false,
+      advertisement: advertisement5,
     },
     {
       id: 6,
@@ -60,6 +76,7 @@ const CourseContainer = () => {
         "Assists international students in pursuing their education.",
       imgSrc: courseImage6,
       available: false,
+      advertisement: advertisement6,
     },
     {
       id: 7,
@@ -68,6 +85,7 @@ const CourseContainer = () => {
         "Helps students pursuing higher education or postgraduate studies.",
       imgSrc: courseImage7,
       available: false,
+      advertisement: advertisement7,
     },
     {
       id: 8,
@@ -75,6 +93,7 @@ const CourseContainer = () => {
       description: "Supports students pursuing their undergraduate degree.",
       imgSrc: courseImage8,
       available: false,
+      advertisement: advertisement8,
     },
     {
       id: 9,
@@ -83,6 +102,7 @@ const CourseContainer = () => {
         "Provides funding for students pursuing vocational or technical education.",
       imgSrc: courseImage9,
       available: false,
+      advertisement: advertisement9,
     },
     {
       id: 10,
@@ -91,6 +111,7 @@ const CourseContainer = () => {
         "Assists students with disabilities in achieving their educational goals.",
       imgSrc: courseImage10,
       available: false,
+      advertisement: advertisement10,
     },
   ];
   return (
