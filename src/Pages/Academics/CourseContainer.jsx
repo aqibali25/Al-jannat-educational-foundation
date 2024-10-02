@@ -20,12 +20,14 @@ const CourseContainer = () => {
       description:
         "Awarded to students with outstanding academic achievements.",
       imgSrc: courseImage1,
+      available: true,
     },
     {
       id: 2,
       title: "Laptop scholarship program",
       description: "Provided to students who demonstrate financial need.",
       imgSrc: courseImage2,
+      available: false,
     },
     {
       id: 3,
@@ -33,6 +35,7 @@ const CourseContainer = () => {
       description:
         "Recognizes students who exhibit exceptional leadership skills.",
       imgSrc: courseImage3,
+      available: false,
     },
     {
       id: 4,
@@ -40,6 +43,7 @@ const CourseContainer = () => {
       description:
         "Honors students who demonstrate a strong commitment to community service.",
       imgSrc: courseImage4,
+      available: false,
     },
     {
       id: 5,
@@ -47,6 +51,7 @@ const CourseContainer = () => {
       description:
         "Supports students with exceptional talents in arts, sports, or other areas",
       imgSrc: courseImage5,
+      available: false,
     },
     {
       id: 6,
@@ -54,6 +59,7 @@ const CourseContainer = () => {
       description:
         "Assists international students in pursuing their education.",
       imgSrc: courseImage6,
+      available: false,
     },
     {
       id: 7,
@@ -61,12 +67,14 @@ const CourseContainer = () => {
       description:
         "Helps students pursuing higher education or postgraduate studies.",
       imgSrc: courseImage7,
+      available: false,
     },
     {
       id: 8,
       title: "Undergraduate Scholarship",
       description: "Supports students pursuing their undergraduate degree.",
       imgSrc: courseImage8,
+      available: false,
     },
     {
       id: 9,
@@ -74,6 +82,7 @@ const CourseContainer = () => {
       description:
         "Provides funding for students pursuing vocational or technical education.",
       imgSrc: courseImage9,
+      available: false,
     },
     {
       id: 10,
@@ -81,6 +90,7 @@ const CourseContainer = () => {
       description:
         "Assists students with disabilities in achieving their educational goals.",
       imgSrc: courseImage10,
+      available: false,
     },
   ];
   return (
