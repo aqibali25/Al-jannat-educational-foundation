@@ -173,4 +173,28 @@ router.post("/applicant", (req, res) => {
   );
 });
 
+router.post("/contact-us", (req, res) => {
+  const {name, email, message} = req.body;
+
+  // Insert into ApplicantDetails table
+  const contactSql = `
+    INSERT INTO contactus (name, email, message) VALUES (?, ?, ?)
+  `;
+
+  db.query(
+    contactSql,
+    [name, email, message],
+    (err, result) => {
+      if (err) {
+        console.error("Error inserting data into ApplicantDetails table:", err);
+        res.status(500).json({ message: "Server error", error: err.message });
+      } else {
+        res
+          .status(201)
+          .json({ message: "Contact details submitted successfully" });
+      }
+    }
+  );
+});
+
 module.exports = router; // Export the router
