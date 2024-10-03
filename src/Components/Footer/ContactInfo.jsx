@@ -5,7 +5,7 @@ const ContactInfo = () => {
       <address>
         Al Jannat Educational Foundation
         <br />
-        Hussain Beli road near university of kids school
+        Hussain Beli road near university of kids school Ghotki
         <br />
         Email: aljannateducationfoundation@gmail.com
         <br />

@@ -33,7 +33,6 @@ const AdmissionForm = () => {
     lastSchool: "",
     lastExamPassed: "",
     lastExamYear: "",
-    lastExamMarks: "",
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -256,26 +255,6 @@ const AdmissionForm = () => {
         </div>
       </div>
 
-      <div class="section-title">Student SSC Details</div>
-      <div class="row">
-        <label>
-          <strong>SSC Board:</strong>
-          <p class="input-field">${formData.sscBoard || "N/A"}</p>
-        </label>
-        <label>
-          <strong>Passing Year:</strong>
-          <p class="input-field">${formData.passingYear || "N/A"}</p>
-        </label>
-        <label>
-          <strong>SSC Seat Number:</strong>
-          <p class="input-field">${formData.sscSeatNumber || "N/A"}</p>
-        </label>
-        <label>
-          <strong>Marks Obtained:</strong>
-          <p class="input-field">${formData.marksObtained || "N/A"}</p>
-        </label>
-      </div>
-
       <div class="section-title">Applicant Details</div>
       <div class="row">
         <label>
@@ -336,6 +315,33 @@ const AdmissionForm = () => {
         </label>
       </div>
 
+    ${
+      formData.sscBoard.length > 0 &&
+      formData.passingYear.length > 0 &&
+      formData.sscSeatNumber.length > 0 &&
+      formData.marksObtained.length > 0
+        ? `<div class="section-title">Student SSC Details</div>
+      <div class="row">
+        <label>
+          <strong>SSC Board:</strong>
+          <p class="input-field">${formData.sscBoard || "N/A"}</p>
+        </label>
+        <label>
+          <strong>Passing Year:</strong>
+          <p class="input-field">${formData.passingYear || "N/A"}</p>
+        </label>
+        <label>
+          <strong>SSC Seat Number:</strong>
+          <p class="input-field">${formData.sscSeatNumber || "N/A"}</p>
+        </label>
+        <label>
+          <strong>Marks Obtained:</strong>
+          <p class="input-field">${formData.marksObtained || "N/A"}</p>
+        </label>
+      </div>`
+        : ""
+    }
+      
       <div class="section-title">Student Prequalifying Details</div>
       <div class="row">
         <label>
@@ -349,10 +355,6 @@ const AdmissionForm = () => {
         <label>
           <strong>Last Exam Year:</strong>
           <p class="input-field">${formData.lastExamYear || "N/A"}</p>
-        </label>
-        <label>
-          <strong>Last Exam Marks:</strong>
-          <p class="input-field">${formData.lastExamMarks || "N/A"}</p>
         </label>
       </div>
 
@@ -783,6 +785,7 @@ const AdmissionForm = () => {
                 onChange={(e) =>
                   handleInputChange("academicYear", e.target.value)
                 }
+                required
               />
               <FormField
                 label="Application Date"
@@ -791,6 +794,7 @@ const AdmissionForm = () => {
                 onChange={(e) =>
                   handleInputChange("applicationDate", e.target.value)
                 }
+                required
               />
               <FormField
                 label="College Name"
@@ -799,12 +803,14 @@ const AdmissionForm = () => {
                 onChange={(e) =>
                   handleInputChange("collegeName", e.target.value)
                 }
+                required
               />
               <FormField
                 label="Class"
                 type="text"
                 value={formData.class}
                 onChange={(e) => handleInputChange("class", e.target.value)}
+                required
               />
             </div>
           </div>
@@ -822,6 +828,7 @@ const AdmissionForm = () => {
                 onChange={(e) =>
                   handleInputChange("applicantName", e.target.value)
                 }
+                required
               />
             </div>
             <div className="col-md-6">
@@ -832,6 +839,7 @@ const AdmissionForm = () => {
                 onChange={(e) =>
                   handleInputChange("fatherName", e.target.value)
                 }
+                required
               />
             </div>{" "}
             <div className="col-md-6">
@@ -842,6 +850,7 @@ const AdmissionForm = () => {
                 onChange={(e) =>
                   handleInputChange("fatherCnic", e.target.value)
                 }
+                required
               />
             </div>
             <div className="col-md-6">
@@ -850,6 +859,7 @@ const AdmissionForm = () => {
                 type="date"
                 value={formData.dob}
                 onChange={(e) => handleInputChange("dob", e.target.value)}
+                required
               />
             </div>
             <div className="col-md-6">
@@ -869,6 +879,7 @@ const AdmissionForm = () => {
                 type="text"
                 value={formData.caste}
                 onChange={(e) => handleInputChange("caste", e.target.value)}
+                required
               />
             </div>
             <div className="col-md-6">
@@ -877,6 +888,7 @@ const AdmissionForm = () => {
                 type="text"
                 value={formData.religion}
                 onChange={(e) => handleInputChange("religion", e.target.value)}
+                required
               />
             </div>
             <div className="col-md-6">
@@ -893,6 +905,7 @@ const AdmissionForm = () => {
                 type="text"
                 value={formData.age}
                 onChange={(e) => handleInputChange("age", e.target.value)}
+                required
               />
             </div>
             <div className="col-md-6">
@@ -909,6 +922,7 @@ const AdmissionForm = () => {
                 type="text"
                 value={formData.address}
                 onChange={(e) => handleInputChange("address", e.target.value)}
+                required
               />
             </div>
             <div className="col-md-6">
@@ -917,6 +931,7 @@ const AdmissionForm = () => {
                 type="text"
                 value={formData.mobile}
                 onChange={(e) => handleInputChange("mobile", e.target.value)}
+                required
               />
             </div>
             <div className="col-md-6">
@@ -927,6 +942,7 @@ const AdmissionForm = () => {
                 onChange={(e) =>
                   handleInputChange("annualIncome", e.target.value)
                 }
+                required
               />
             </div>
             <div className="col-md-12">
@@ -937,6 +953,7 @@ const AdmissionForm = () => {
                 onChange={(e) =>
                   handleInputChange("maritalStatus", e.target.value)
                 }
+                required
               />
             </div>
           </div>
@@ -1001,6 +1018,7 @@ const AdmissionForm = () => {
                 onChange={(e) =>
                   handleInputChange("lastSchool", e.target.value)
                 }
+                required
               />
             </div>
             <div className="col-md-6">
@@ -1011,6 +1029,7 @@ const AdmissionForm = () => {
                 onChange={(e) =>
                   handleInputChange("lastExamPassed", e.target.value)
                 }
+                required
               />
             </div>
             <div className="col-md-6">
@@ -1021,6 +1040,7 @@ const AdmissionForm = () => {
                 onChange={(e) =>
                   handleInputChange("lastExamYear", e.target.value)
                 }
+                required
               />
             </div>
           </div>

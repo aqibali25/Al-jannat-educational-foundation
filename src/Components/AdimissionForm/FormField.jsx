@@ -1,6 +1,6 @@
 import React from "react";
 
-const FormField = ({ label, type, value, onChange }) => {
+const FormField = ({ label, type, value, onChange, required }) => {
   return (
     <div className="form-group">
       <label>{label}</label>
@@ -9,7 +9,7 @@ const FormField = ({ label, type, value, onChange }) => {
         className="form-control"
         value={value} // Bind value to formData
         onChange={onChange} // Handle change properly
-        required
+        required={required}
       />
     </div>
   );
