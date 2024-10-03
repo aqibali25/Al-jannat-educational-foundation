@@ -696,6 +696,11 @@ const AdmissionForm = () => {
                 </div>
               </div>
               <div class="instruction-section">
+                <p className="challanNote" style="color: red; font-weight: 600;">
+                  Note: Please Send Paid Challan To Our Official Email Address.
+                  <br />
+                  aljannateducationfoundation@gmail.com
+                </p>
                 <p>
                   Instructions: Please keep this receipt safe. It is proof of your
                   payment.
@@ -738,6 +743,11 @@ const AdmissionForm = () => {
         <p>
           Your form has been submitted. You can now print the form or the
           challan.
+        </p>
+        <p className="challanNote">
+          Note: Please Send Paid Challan To Our Official Email Address.
+          <br />
+          aljannateducationfoundation@gmail.com
         </p>
         <button onClick={printForm} className="btn btn-primary m-2">
           Print Form
@@ -800,6 +810,138 @@ const AdmissionForm = () => {
           </div>
         </section>
 
+        {/* Application Details Section */}
+        <section className="mb-5 AdmissionFormSections">
+          <h2 className="heading2 text-center mb-4">Application Details</h2>
+          <div className="row">
+            <div className="col-md-12">
+              <FormField
+                label="Applicant Name"
+                type="text"
+                value={formData.applicantName}
+                onChange={(e) =>
+                  handleInputChange("applicantName", e.target.value)
+                }
+              />
+            </div>
+            <div className="col-md-6">
+              <FormField
+                label="Father's Name"
+                type="text"
+                value={formData.fatherName}
+                onChange={(e) =>
+                  handleInputChange("fatherName", e.target.value)
+                }
+              />
+            </div>{" "}
+            <div className="col-md-6">
+              <FormField
+                label="Father's CNIC"
+                type="text"
+                value={formData.fatherCnic}
+                onChange={(e) =>
+                  handleInputChange("fatherCnic", e.target.value)
+                }
+              />
+            </div>
+            <div className="col-md-6">
+              <FormField
+                label="Date of Birth"
+                type="date"
+                value={formData.dob}
+                onChange={(e) => handleInputChange("dob", e.target.value)}
+              />
+            </div>
+            <div className="col-md-6">
+              <DropdownField
+                label="Resident Of"
+                type="text"
+                value={formData.residentOf}
+                options={["Ghotki", "Khanpur", "Mirpur", "Daharki", "Ubauro"]}
+                onChange={(e) =>
+                  handleInputChange("residentOf", e.target.value)
+                }
+              />
+            </div>
+            <div className="col-md-12">
+              <FormField
+                label="Caste"
+                type="text"
+                value={formData.caste}
+                onChange={(e) => handleInputChange("caste", e.target.value)}
+              />
+            </div>
+            <div className="col-md-6">
+              <FormField
+                label="Religion"
+                type="text"
+                value={formData.religion}
+                onChange={(e) => handleInputChange("religion", e.target.value)}
+              />
+            </div>
+            <div className="col-md-6">
+              <DropdownField
+                label="Gender"
+                value={formData.gender}
+                options={["Male", "Female", "Other"]}
+                onChange={(e) => handleInputChange("gender", e.target.value)}
+              />
+            </div>
+            <div className="col-md-6">
+              <FormField
+                label="Age"
+                type="text"
+                value={formData.age}
+                onChange={(e) => handleInputChange("age", e.target.value)}
+              />
+            </div>
+            <div className="col-md-6">
+              <DropdownField
+                label="Disabled"
+                value={formData.disabled}
+                options={["Yes", "No"]}
+                onChange={(e) => handleInputChange("disabled", e.target.value)}
+              />
+            </div>
+            <div className="col-md-12">
+              <FormField
+                label="Address"
+                type="text"
+                value={formData.address}
+                onChange={(e) => handleInputChange("address", e.target.value)}
+              />
+            </div>
+            <div className="col-md-6">
+              <FormField
+                label="Mobile No."
+                type="text"
+                value={formData.mobile}
+                onChange={(e) => handleInputChange("mobile", e.target.value)}
+              />
+            </div>
+            <div className="col-md-6">
+              <FormField
+                label="Total Annual Income"
+                type="text"
+                value={formData.annualIncome}
+                onChange={(e) =>
+                  handleInputChange("annualIncome", e.target.value)
+                }
+              />
+            </div>
+            <div className="col-md-12">
+              <DropdownField
+                label="Marital Status"
+                value={formData.maritalStatus}
+                options={["Single", "Married"]}
+                onChange={(e) =>
+                  handleInputChange("maritalStatus", e.target.value)
+                }
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Student SSC/HSC Details Section */}
         <section className="mb-5 AdmissionFormSections">
           <h2 className="heading2 text-center mb-4">Student SSC/HSC Details</h2>
@@ -845,138 +987,6 @@ const AdmissionForm = () => {
           </div>
         </section>
 
-        {/* Application Details Section */}
-        <section className="mb-5 AdmissionFormSections">
-          <h2 className="heading2 text-center mb-4">Application Details</h2>
-          <div className="row">
-            <div className="col-md-12">
-              <FormField
-                label="Applicant Name"
-                type="text"
-                value={formData.applicantName}
-                onChange={(e) =>
-                  handleInputChange("applicantName", e.target.value)
-                }
-              />
-            </div>
-            <div className="col-md-12">
-              <FormField
-                label="Father's Name"
-                type="text"
-                value={formData.fatherName}
-                onChange={(e) =>
-                  handleInputChange("fatherName", e.target.value)
-                }
-              />
-            </div>
-            <div className="col-md-6">
-              <FormField
-                label="Date of Birth"
-                type="date"
-                value={formData.dob}
-                onChange={(e) => handleInputChange("dob", e.target.value)}
-              />
-            </div>
-            <div className="col-md-6">
-              <DropdownField
-                label="Resident Of"
-                type="text"
-                value={formData.residentOf}
-                options={["Ghotki", "Khanpur", "Mirpur", "Daharki", "Ubauro"]}
-                onChange={(e) =>
-                  handleInputChange("residentOf", e.target.value)
-                }
-              />
-            </div>
-            <div className="col-md-12">
-              <FormField
-                label="Father's CNIC"
-                type="text"
-                value={formData.fatherCnic}
-                onChange={(e) =>
-                  handleInputChange("fatherCnic", e.target.value)
-                }
-              />
-            </div>
-            <div className="col-md-6">
-              <FormField
-                label="Caste"
-                type="text"
-                value={formData.caste}
-                onChange={(e) => handleInputChange("caste", e.target.value)}
-              />
-            </div>
-            <div className="col-md-6">
-              <FormField
-                label="Religion"
-                type="text"
-                value={formData.religion}
-                onChange={(e) => handleInputChange("religion", e.target.value)}
-              />
-            </div>
-            <div className="col-md-6">
-              <DropdownField
-                label="Gender"
-                value={formData.gender}
-                options={["Male", "Female", "Other"]}
-                onChange={(e) => handleInputChange("gender", e.target.value)}
-              />
-            </div>
-            <div className="col-md-3">
-              <FormField
-                label="Age"
-                type="text"
-                value={formData.age}
-                onChange={(e) => handleInputChange("age", e.target.value)}
-              />
-            </div>
-            <div className="col-md-3">
-              <DropdownField
-                label="Disabled"
-                value={formData.disabled}
-                options={["Yes", "No"]}
-                onChange={(e) => handleInputChange("disabled", e.target.value)}
-              />
-            </div>
-            <div className="col-md-6">
-              <FormField
-                label="Address"
-                type="text"
-                value={formData.address}
-                onChange={(e) => handleInputChange("address", e.target.value)}
-              />
-            </div>
-            <div className="col-md-6">
-              <FormField
-                label="Mobile No."
-                type="text"
-                value={formData.mobile}
-                onChange={(e) => handleInputChange("mobile", e.target.value)}
-              />
-            </div>
-            <div className="col-md-6">
-              <FormField
-                label="Total Annual Income"
-                type="text"
-                value={formData.annualIncome}
-                onChange={(e) =>
-                  handleInputChange("annualIncome", e.target.value)
-                }
-              />
-            </div>
-            <div className="col-md-6">
-              <DropdownField
-                label="Marital Status"
-                value={formData.maritalStatus}
-                options={["Single", "Married"]}
-                onChange={(e) =>
-                  handleInputChange("maritalStatus", e.target.value)
-                }
-              />
-            </div>
-          </div>
-        </section>
-
         {/* Student Prequalifying Details Section */}
         <section className="mb-5 AdmissionFormSections">
           <h2 className="heading2 text-center mb-4">
@@ -993,7 +1003,7 @@ const AdmissionForm = () => {
                 }
               />
             </div>
-            <div className="col-md-12">
+            <div className="col-md-6">
               <FormField
                 label="Last Exam Passed"
                 type="text"
@@ -1010,16 +1020,6 @@ const AdmissionForm = () => {
                 value={formData.lastExamYear}
                 onChange={(e) =>
                   handleInputChange("lastExamYear", e.target.value)
-                }
-              />
-            </div>
-            <div className="col-md-6">
-              <FormField
-                label="Last Exam Marks"
-                type="text"
-                value={formData.lastExamMarks}
-                onChange={(e) =>
-                  handleInputChange("lastExamMarks", e.target.value)
                 }
               />
             </div>

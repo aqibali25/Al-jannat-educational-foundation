@@ -119,6 +119,12 @@ input:focus,
 select:focus {
   box-shadow: 0 0 10px 0 #e9c476 !important;
 }
+.challanNote {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 20px 0;
+  color: red;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .academic-details .form-field,

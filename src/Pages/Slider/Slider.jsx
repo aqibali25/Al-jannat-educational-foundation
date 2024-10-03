@@ -44,6 +44,8 @@ const Slider = () => {
     <div
       id="carouselExampleCaptions"
       className="carousel slide imageSlider"
+      data-bs-ride="carousel"
+      data-bs-interval="4000"
       style={SliderStyles}
     >
       <CarouselIndicators slides={slides} />
