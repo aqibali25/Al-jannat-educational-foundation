@@ -8,7 +8,8 @@ const UpcomingEvents = ({ event }) => {
       <span>{event.date}</span>
       <div className="text">
         <h3>
-          Event Heading<p>{event.description}</p>
+          {event.heading}
+          <p>{event.description}</p>
         </h3>
       </div>
     </div>
