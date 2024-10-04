@@ -165,7 +165,7 @@ router.post("/applicant", (req, res) => {
           );
         }
 
-        res
+        xres
           .status(201)
           .json({ message: "Applicant details submitted successfully" });
       }
