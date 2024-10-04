@@ -4,7 +4,6 @@ import FormField from "../../Components/AdimissionForm/FormField";
 import ImageInput from "../../Components/AdimissionForm/ImageInput";
 import DropdownField from "../../Components/AdimissionForm/DropdownField";
 import "./AdmissionForm.css";
-import axios from "axios";
 
 const AdmissionForm = () => {
   const [formData, setFormData] = useState({
@@ -50,28 +49,26 @@ const AdmissionForm = () => {
     setFormData((prevFormData) => ({ ...prevFormData, [key]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log({ ...formData });
-    axios
-      .post("/applicants", { ...formData })
-      .then((res) => console.log(res))
-      .catch((err) => console.error(err));
 
     const newChallanNumber = generateChallanNo();
     setChallanNumber(newChallanNumber);
     setIsSubmitted(true);
     try {
-      const response = await fetch('http://localhost:5000/api/applicants/applicant', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "http://localhost:5000/api/applicants/applicant",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
 
       const data = await response.json();
@@ -105,9 +102,8 @@ const AdmissionForm = () => {
         lastExamYear: "",
       });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error("Error submitting form:", error);
     }
-    
   };
 
   const generateChallanNo = () => {
@@ -912,7 +908,9 @@ const AdmissionForm = () => {
                 label="Date of Birth"
                 type="date"
                 value={formData.dateOfBirth}
-                onChange={(e) => handleInputChange("dateOfBirth", e.target.value)}
+                onChange={(e) =>
+                  handleInputChange("dateOfBirth", e.target.value)
+                }
                 required
               />
             </div>
