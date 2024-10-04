@@ -6,7 +6,7 @@ const DropdownField = ({ label, value, options, onChange }) => {
       <label>{label}</label>
       <select
         className="form-control"
-        value={value}
+        value={value}  // Controlled component using value
         onChange={onChange}
         required
       >

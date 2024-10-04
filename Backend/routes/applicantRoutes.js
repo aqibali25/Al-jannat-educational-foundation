@@ -28,19 +28,19 @@ router.post("/applicant", (req, res) => {
   const applicantSql = `
     INSERT INTO ApplicantDetails (
       applicant_name,
-      fathersName,
-      dateOfBirth,
-      residentOf,
-      fathersCnic,
+      father_name,
+      date_of_birth,
+      resident_of,
+      father_cnic,
       caste,
       religion,
       gender,
       age,
       disabled,
       address,
-      mobileNo,
-      annualIncome,
-      maritalStatus
+      mobile_no,
+      total_annual_income,
+      marital_status
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
@@ -165,7 +165,7 @@ router.post("/applicant", (req, res) => {
           );
         }
 
-        res
+        xres
           .status(201)
           .json({ message: "Applicant details submitted successfully" });
       }
