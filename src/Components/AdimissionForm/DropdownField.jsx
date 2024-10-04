@@ -10,7 +10,7 @@ const DropdownField = ({ label, value, options, onChange }) => {
         onChange={onChange}
         required
       >
-        <option value="" disabled selected>
+        <option value="" disabled>
           --select--
         </option>
         {options.map((option, index) => (

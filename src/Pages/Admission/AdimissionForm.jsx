@@ -4,6 +4,7 @@ import FormField from "../../Components/AdimissionForm/FormField";
 import ImageInput from "../../Components/AdimissionForm/ImageInput";
 import DropdownField from "../../Components/AdimissionForm/DropdownField";
 import "./AdmissionForm.css";
+import axios from "axios";
 
 const AdmissionForm = () => {
   const [formData, setFormData] = useState({
@@ -23,13 +24,13 @@ const AdmissionForm = () => {
     fatherCnic: "",
     caste: "",
     religion: "",
-    gender: "Male", // Default value
+    gender: "",
     age: "",
-    disabled: "No", // Default value
+    disabled: "",
     address: "",
     mobile: "",
     annualIncome: "",
-    maritalStatus: "Single", // Default value
+    maritalStatus: "",
     lastSchool: "",
     lastExamPassed: "",
     lastExamYear: "",
@@ -49,8 +50,14 @@ const AdmissionForm = () => {
     setFormData((prevFormData) => ({ ...prevFormData, [key]: value }));
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
+    console.log({ ...formData });
+    axios
+      .post("/applicants", { ...formData })
+      .then((res) => console.log(res))
+      .catch((err) => console.error(err));
+
     const newChallanNumber = generateChallanNo();
     setChallanNumber(newChallanNumber);
     setIsSubmitted(true);
