@@ -17,17 +17,17 @@ const AdmissionForm = () => {
     sscSeatNumber: "",
     marksObtained: "",
     applicantName: "",
-    fatherName: "",
-    dob: "",
+    fathersName: "",
+    dateOfBirth: "",
     residentOf: "",
-    fatherCnic: "",
+    fathersCnic: "",
     caste: "",
     religion: "",
     gender: "Male", // Default value
     age: "",
     disabled: "No", // Default value
     address: "",
-    mobile: "",
+    mobile_no: "",
     annualIncome: "",
     maritalStatus: "Single", // Default value
     lastSchool: "",
@@ -54,6 +54,53 @@ const AdmissionForm = () => {
     const newChallanNumber = generateChallanNo();
     setChallanNumber(newChallanNumber);
     setIsSubmitted(true);
+    try {
+      const response = await fetch('http://localhost:5000/api/applicants/applicant', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      console.log(data.message); // Show success message or handle it as needed
+      setFormData({
+        uploadedImage: "",
+        academicYear: "",
+        applicationDate: "",
+        collegeName: "",
+        class: "",
+        sscBoard: "",
+        passingYear: "",
+        sscSeatNumber: "",
+        marksObtained: "",
+        applicantName: "",
+        fathersName: "",
+        dateOfBirth: "",
+        residentOf: "",
+        fathersCnic: "",
+        caste: "",
+        religion: "",
+        gender: "Male", // Default value
+        age: "",
+        disabled: "No", // Default value
+        address: "",
+        mobile_no: "",
+        annualIncome: "",
+        maritalStatus: "Single", // Default value
+        lastSchool: "",
+        lastExamPassed: "",
+        lastExamYear: "",
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+    
   };
 
   const generateChallanNo = () => {
@@ -263,11 +310,11 @@ const AdmissionForm = () => {
         </label>
         <label>
           <strong>Father's Name:</strong>
-          <p class="input-field">${formData.fatherName || "N/A"}</p>
+          <p class="input-field">${formData.fathersName || "N/A"}</p>
         </label>
         <label>
           <strong>Date of Birth:</strong>
-          <p class="input-field">${formData.dob || "N/A"}</p>
+          <p class="input-field">${formData.dateOfBirth || "N/A"}</p>
         </label>
         <label>
           <strong>Resident Of:</strong>
@@ -275,7 +322,7 @@ const AdmissionForm = () => {
         </label>
         <label>
           <strong>Father's CNIC:</strong>
-          <p class="input-field">${formData.fatherCnic || "N/A"}</p>
+          <p class="input-field">${formData.fathersCnic || "N/A"}</p>
         </label>
         <label>
           <strong>Caste:</strong>
@@ -302,8 +349,8 @@ const AdmissionForm = () => {
           <p class="input-field">${formData.address || "N/A"}</p>
         </label>
         <label>
-          <strong>Mobile No:</strong>
-          <p class="input-field">${formData.mobile || "N/A"}</p>
+          <strong>mobile_no No:</strong>
+          <p class="input-field">${formData.mobile_no || "N/A"}</p>
         </label>
         <label>
           <strong>Total Annual Income:</strong>
@@ -687,7 +734,7 @@ const AdmissionForm = () => {
                   <p class="fields"></p>
                 </div>
                 <div class="row">
-                  <label>Tel/Mobile No:</label>
+                  <label>Tel/mobile_no No:</label>
                   <p class="fields"></p>
                 </div>
               </div>
@@ -835,9 +882,9 @@ const AdmissionForm = () => {
               <FormField
                 label="Father's Name"
                 type="text"
-                value={formData.fatherName}
+                value={formData.fathersName}
                 onChange={(e) =>
-                  handleInputChange("fatherName", e.target.value)
+                  handleInputChange("fathersName", e.target.value)
                 }
                 required
               />
@@ -846,9 +893,9 @@ const AdmissionForm = () => {
               <FormField
                 label="Father's CNIC"
                 type="text"
-                value={formData.fatherCnic}
+                value={formData.fathersCnic}
                 onChange={(e) =>
-                  handleInputChange("fatherCnic", e.target.value)
+                  handleInputChange("fathersCnic", e.target.value)
                 }
                 required
               />
@@ -857,8 +904,8 @@ const AdmissionForm = () => {
               <FormField
                 label="Date of Birth"
                 type="date"
-                value={formData.dob}
-                onChange={(e) => handleInputChange("dob", e.target.value)}
+                value={formData.dateOfBirth}
+                onChange={(e) => handleInputChange("dateOfBirth", e.target.value)}
                 required
               />
             </div>
@@ -927,10 +974,10 @@ const AdmissionForm = () => {
             </div>
             <div className="col-md-6">
               <FormField
-                label="Mobile No."
+                label="mobile_no No."
                 type="text"
-                value={formData.mobile}
-                onChange={(e) => handleInputChange("mobile", e.target.value)}
+                value={formData.mobile_no}
+                onChange={(e) => handleInputChange("mobile_no", e.target.value)}
                 required
               />
             </div>
