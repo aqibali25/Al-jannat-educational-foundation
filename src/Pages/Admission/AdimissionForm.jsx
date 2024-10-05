@@ -352,7 +352,7 @@ const AdmissionForm = () => {
           <p class="input-field">${formData.address || "N/A"}</p>
         </label>
         <label>
-          <strong>mobile_no No:</strong>
+          <strong>mobile No:</strong>
           <p class="input-field">${formData.mobile_no || "N/A"}</p>
         </label>
         <label>
@@ -737,7 +737,7 @@ const AdmissionForm = () => {
                   <p class="fields"></p>
                 </div>
                 <div class="row">
-                  <label>Tel/mobile_no No:</label>
+                  <label>Tel/mobile No:</label>
                   <p class="fields"></p>
                 </div>
               </div>
@@ -979,7 +979,7 @@ const AdmissionForm = () => {
             </div>
             <div className="col-md-6">
               <FormField
-                label="mobile_no No."
+                label="mobile No"
                 type="text"
                 value={formData.mobile_no}
                 onChange={(e) => handleInputChange("mobile_no", e.target.value)}
