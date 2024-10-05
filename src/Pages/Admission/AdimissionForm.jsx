@@ -59,45 +59,44 @@ const AdmissionForm = () => {
     }));
   };
 
-
- const handleInputChange = (key, value) => {
-  if (key in formData) {
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [key]: value,
-    }));
-  } else if (key in formData.academicDetails) {
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      academicDetails: {
-        ...prevFormData.academicDetails,
+  const handleInputChange = (key, value) => {
+    if (key in formData) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
         [key]: value,
-      },
-    }));
-  } else if (key in formData.prequalifyingDetails) {
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      prequalifyingDetails: {
-        ...prevFormData.prequalifyingDetails,
-        [key]: value,
-      },
-    }));
-  } else if (key in formData.sscDetails) {
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      sscDetails: {
-        ...prevFormData.sscDetails,
-        [key]: value,
-      },
-    }));
-  }
-};
-
+      }));
+    } else if (key in formData.academicDetails) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        academicDetails: {
+          ...prevFormData.academicDetails,
+          [key]: value,
+        },
+      }));
+    } else if (key in formData.prequalifyingDetails) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        prequalifyingDetails: {
+          ...prevFormData.prequalifyingDetails,
+          [key]: value,
+        },
+      }));
+    } else if (key in formData.sscDetails) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        sscDetails: {
+          ...prevFormData.sscDetails,
+          [key]: value,
+        },
+      }));
+    }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     // Assuming there's a function to generate a challan number
     const newChallanNumber = generateChallanNo();
+    setIsSubmitted(true);
     setChallanNumber(newChallanNumber);
 
     try {
@@ -358,10 +357,11 @@ const AdmissionForm = () => {
           </label>
         </div>
         <div class="image-input-container">
-          ${formData.uploadedImage
-        ? `<img src="${formData.uploadedImage}" alt="Uploaded Image"/>`
-        : `<p>No Image Uploaded</p>`
-      }
+          ${
+            formData.uploadedImage
+              ? `<img src="${formData.uploadedImage}" alt="Uploaded Image"/>`
+              : `<p>No Image Uploaded</p>`
+          }
         </div>
       </div>
 
@@ -425,10 +425,11 @@ const AdmissionForm = () => {
         </label>
       </div>
 
-    ${formData.sscBoard.length > 0 &&
-        formData.passingYear.length > 0 &&
-        formData.sscSeatNumber.length > 0 &&
-        formData.marksObtained.length > 0
+    ${
+      formData.sscBoard.length > 0 &&
+      formData.passingYear.length > 0 &&
+      formData.sscSeatNumber.length > 0 &&
+      formData.marksObtained.length > 0
         ? `<div class="section-title">Student SSC Details</div>
       <div class="row">
         <label>
@@ -437,33 +438,45 @@ const AdmissionForm = () => {
         </label>
         <label>
           <strong>Passing Year:</strong>
-          <p class="input-field">${formData.academicDetails.passingYear || "N/A"}</p>
+          <p class="input-field">${
+            formData.academicDetails.passingYear || "N/A"
+          }</p>
         </label>
         <label>
           <strong>SSC Seat Number:</strong>
-          <p class="input-field">${formData.academicDetails.sscSeatNumber || "N/A"}</p>
+          <p class="input-field">${
+            formData.academicDetails.sscSeatNumber || "N/A"
+          }</p>
         </label>
         <label>
           <strong>Marks Obtained:</strong>
-          <p class="input-field">${formData.academicDetails.marksObtained || "N/A"}</p>
+          <p class="input-field">${
+            formData.academicDetails.marksObtained || "N/A"
+          }</p>
         </label>
       </div>`
         : ""
-      }
+    }
       
       <div class="section-title">Student Prequalifying Details</div>
     <div className="row">
   <label>
     <strong>Last Attended School/College/Institute:</strong>
-    <p className="input-field">${formData.prequalifyingDetails.last_attended_institute || "N/A"}</p>
+    <p className="input-field">${
+      formData.prequalifyingDetails.last_attended_institute || "N/A"
+    }</p>
   </label>
   <label>
     <strong>Last Exam Passed:</strong>
-    <p className="input-field">${formData.prequalifyingDetails.last_exam_passed || "N/A"}</p>
+    <p className="input-field">${
+      formData.prequalifyingDetails.last_exam_passed || "N/A"
+    }</p>
   </label>
   <label>
     <strong>Last Exam Year:</strong>
-    <p className="input-field">${formData.prequalifyingDetails.last_exam_passed_year || "N/A"}</p>
+    <p className="input-field">${
+      formData.prequalifyingDetails.last_exam_passed_year || "N/A"
+    }</p>
   </label>
 </div>
 
@@ -489,14 +502,14 @@ const AdmissionForm = () => {
 
     const payment =
       classValue === "6" ||
-        classValue === "6th" ||
-        classValue === "six" ||
-        classValue === "7" ||
-        classValue === "7th" ||
-        classValue === "seven" ||
-        classValue === "8" ||
-        classValue === "8th" ||
-        classValue === "eight"
+      classValue === "6th" ||
+      classValue === "six" ||
+      classValue === "7" ||
+      classValue === "7th" ||
+      classValue === "seven" ||
+      classValue === "8" ||
+      classValue === "8th" ||
+      classValue === "eight"
         ? 1000
         : 1200;
 
@@ -711,8 +724,8 @@ const AdmissionForm = () => {
       <body>
         <div class="copiesOfChallan">
           ${challanData.copyTags
-        .map(
-          (tag) => `
+            .map(
+              (tag) => `
             <div class="challan-form">
               <div class="copyTag"><label>${tag.label}</label> ${tag.copyTag} Copy</div>
               <div class="header">
@@ -835,8 +848,8 @@ const AdmissionForm = () => {
               </div>
             </div>
           `
-        )
-        .join("")}
+            )
+            .join("")}
         </div>
         <button onclick="window.print()">Print</button>
       </body>
@@ -1039,7 +1052,7 @@ const AdmissionForm = () => {
             </div>
             <div className="col-md-6">
               <FormField
-                label="mobile No"
+                label="Mobile No"
                 type="text"
                 value={formData.mobile_no}
                 onChange={(e) => handleInputChange("mobile_no", e.target.value)}
@@ -1073,61 +1086,57 @@ const AdmissionForm = () => {
 
         {/* Student SSC/HSC Details Section */}
         <section className="mb-5 AdmissionFormSections">
-        <h2 className="heading2 text-center mb-4">Student SSC/HSC Details</h2>
-        <div className="row">
-          <div className="col-md-6">
-            <FormField
-              label="SSC/HSC Board"
-              type="text"
-              value={formData.sscDetails.ssc_hsc_board}
-              onChange={(e) =>
-                handleInputChange("ssc_hsc_board", e.target.value)
-              }
-              required
-            />
+          <h2 className="heading2 text-center mb-4">Student SSC/HSC Details</h2>
+          <div className="row">
+            <div className="col-md-6">
+              <FormField
+                label="SSC/HSC Board"
+                type="text"
+                value={formData.sscDetails.ssc_hsc_board}
+                onChange={(e) =>
+                  handleInputChange("ssc_hsc_board", e.target.value)
+                }
+              />
+            </div>
+            <div className="col-md-6">
+              <FormField
+                label="Passing Year (9th, 10th, 11th, 12th)"
+                type="text"
+                value={formData.sscDetails.passing_year}
+                onChange={(e) =>
+                  handleInputChange("passing_year", e.target.value)
+                }
+              />
+            </div>
+            <div className="col-md-6">
+              <FormField
+                label="SSC/HSC Seat Number"
+                type="text"
+                value={formData.sscDetails.ssc_hsc_seat_number}
+                onChange={(e) =>
+                  handleInputChange("ssc_hsc_seat_number", e.target.value)
+                }
+              />
+            </div>
+            <div className="col-md-6">
+              <FormField
+                label="Marks Obtained"
+                type="text"
+                value={formData.sscDetails.marks_obtained}
+                onChange={(e) =>
+                  handleInputChange("marks_obtained", e.target.value)
+                }
+              />
+            </div>
           </div>
-          <div className="col-md-6">
-            <FormField
-              label="Passing Year (9th, 10th, 11th, 12th)"
-              type="text"
-              value={formData.sscDetails.passing_year}
-              onChange={(e) =>
-                handleInputChange("passing_year", e.target.value)
-              }
-              required
-            />
-          </div>
-          <div className="col-md-6">
-            <FormField
-              label="SSC/HSC Seat Number"
-              type="text"
-              value={formData.sscDetails.ssc_hsc_seat_number}
-              onChange={(e) =>
-                handleInputChange("ssc_hsc_seat_number", e.target.value)
-              }
-              required
-            />
-          </div>
-          <div className="col-md-6">
-            <FormField
-              label="Marks Obtained"
-              type="text"
-              value={formData.sscDetails.marks_obtained}
-              onChange={(e) =>
-                handleInputChange("marks_obtained", e.target.value)
-              }
-              required
-            />
-          </div>
-        </div>
-      </section>
+        </section>
 
         {/* /* Student Prequalifying Details Section */}
         <section className="mb-5 AdmissionFormSections">
           <h2 className="heading2 text-center mb-4">
             Student Prequalifying Details
           </h2>
-          <div className="col-md-6">
+          <div className="col-md-12">
             <FormField
               label="Last Attended School/College/Institute"
               type="text"
@@ -1138,7 +1147,7 @@ const AdmissionForm = () => {
               required
             />
           </div>
-          <div className="col-md-6">
+          <div className="col-md-12">
             <FormField
               label="Last Exam Passed"
               type="text"
@@ -1149,7 +1158,7 @@ const AdmissionForm = () => {
               required
             />
           </div>
-          <div className="col-md-6">
+          <div className="col-md-12">
             <FormField
               label="Last Exam Passed Year"
               type="text"
@@ -1160,7 +1169,7 @@ const AdmissionForm = () => {
               required
             />
           </div>
-          <div className="col-md-6">
+          {/* <div className="col-md-6">
             <FormField
               label="Last Exam Marks"
               type="text"
@@ -1170,11 +1179,8 @@ const AdmissionForm = () => {
               }
               required
             />
-          </div>
-
+          </div> */}
         </section>
-
-
 
         {/* Submit Button */}
         <div className="text-center col-md-12">
