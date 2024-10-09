@@ -78,9 +78,9 @@ router.post("/applicant", (req, res) => {
         const academicSql = `
     INSERT INTO AcademicDetails (
       applicant_id,
-      qualification,
-      institute,
-      passingYear,
+      academic_year,
+      application_date,
+      college_name,
       class
     ) VALUES (?, ?, ?, ?, ?)
   `;

@@ -33,7 +33,7 @@ const AdmissionForm = () => {
       qualification: "",
       institute: "",
       passingYear: "",
-      percentage: "",
+      class: "",
     },
     prequalifyingDetails: {
       last_attended_institute: "",
