@@ -1,12 +1,13 @@
 {
+  "homepage": "https://aqibali25.github.io/Al-jannat-educational-foundation/",
   "name": "al-jannat-educational-foundation",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "start": "react-scripts start",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
