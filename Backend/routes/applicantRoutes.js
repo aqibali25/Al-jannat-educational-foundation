@@ -16,7 +16,7 @@ router.post("/applicant", (req, res) => {
     age,
     disabled,
     address,
-    mobileNo,
+    mobile_no,
     annualIncome,
     maritalStatus,
     academicDetails,
@@ -58,14 +58,16 @@ router.post("/applicant", (req, res) => {
       age,
       disabled,
       address,
-      mobileNo,
+      mobile_no,
       annualIncome,
       maritalStatus,
     ],
     (err, result) => {
       if (err) {
         console.error("Error inserting data into ApplicantDetails table:", err);
-        return res.status(500).json({ message: "Server error", error: err.message });
+        return res
+          .status(500)
+          .json({ message: "Server error", error: err.message });
       }
 
       const applicantId = result.insertId; // Get the newly created applicantId
@@ -94,8 +96,14 @@ router.post("/applicant", (req, res) => {
           ],
           (academicErr) => {
             if (academicErr) {
-              console.error("Error inserting data into AcademicDetails table:", academicErr);
-              return res.status(500).json({ message: "Error inserting academic details", error: academicErr.message });
+              console.error(
+                "Error inserting data into AcademicDetails table:",
+                academicErr
+              );
+              return res.status(500).json({
+                message: "Error inserting academic details",
+                error: academicErr.message,
+              });
             }
           }
         );
@@ -124,8 +132,14 @@ router.post("/applicant", (req, res) => {
           ],
           (sscErr) => {
             if (sscErr) {
-              console.error("Error inserting data into SSCDetails table:", sscErr);
-              return res.status(500).json({ message: "Error inserting SSC details", error: sscErr.message });
+              console.error(
+                "Error inserting data into SSCDetails table:",
+                sscErr
+              );
+              return res.status(500).json({
+                message: "Error inserting SSC details",
+                error: sscErr.message,
+              });
             }
           }
         );
@@ -154,15 +168,23 @@ router.post("/applicant", (req, res) => {
           ],
           (prequalifyingErr) => {
             if (prequalifyingErr) {
-              console.error("Error inserting data into PrequalifyingDetails table:", prequalifyingErr);
-              return res.status(500).json({ message: "Error inserting prequalifying details", error: prequalifyingErr.message });
+              console.error(
+                "Error inserting data into PrequalifyingDetails table:",
+                prequalifyingErr
+              );
+              return res.status(500).json({
+                message: "Error inserting prequalifying details",
+                error: prequalifyingErr.message,
+              });
             }
           }
         );
       }
 
       // Send success response after all inserts
-      res.status(201).json({ message: "Applicant details submitted successfully" });
+      res
+        .status(201)
+        .json({ message: "Applicant details submitted successfully" });
     }
   );
 });
@@ -176,17 +198,15 @@ router.post("/contact-us", (req, res) => {
     INSERT INTO contactus (name, email, message) VALUES (?, ?, ?)
   `;
 
-  db.query(
-    contactSql,
-    [name, email, message],
-    (err) => {
-      if (err) {
-        console.error("Error inserting data into contactus table:", err);
-        return res.status(500).json({ message: "Server error", error: err.message });
-      }
-      res.status(201).json({ message: "Contact details submitted successfully" });
+  db.query(contactSql, [name, email, message], (err) => {
+    if (err) {
+      console.error("Error inserting data into contactus table:", err);
+      return res
+        .status(500)
+        .json({ message: "Server error", error: err.message });
     }
-  );
+    res.status(201).json({ message: "Contact details submitted successfully" });
+  });
 });
 
 module.exports = router; // Export the router
