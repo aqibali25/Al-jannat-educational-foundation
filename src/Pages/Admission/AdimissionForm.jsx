@@ -30,16 +30,15 @@ const AdmissionForm = () => {
     annualIncome: "",
     maritalStatus: "Single", // Default value
     academicDetails: {
-      qualification: "",
-      institute: "",
-      passingYear: "",
+      academicYear: "",
+      applicationDate: "",
+      collegeName: "",
       class: "",
     },
     prequalifyingDetails: {
       last_attended_institute: "",
       last_exam_passed: "",
       last_exam_passed_year: "",
-      last_exam_marks: "",
     },
     sscDetails: {
       ssc_hsc_board: "",
@@ -143,16 +142,15 @@ const AdmissionForm = () => {
         annualIncome: "",
         maritalStatus: "Single", // Default value
         academicDetails: {
-          qualification: "",
-          institute: "",
-          passingYear: "",
-          percentage: "",
+          academicYear: "",
+          applicationDate: "",
+          collegeName: "",
+          class: "",
         },
         prequalifyingDetails: {
           last_attended_institute: "",
           last_exam_passed: "",
           last_exam_passed_year: "",
-          last_exam_marks: "",
         },
         sscDetails: {
           ssc_hsc_board: "",
@@ -1169,17 +1167,6 @@ const AdmissionForm = () => {
               required
             />
           </div>
-          {/* <div className="col-md-6">
-            <FormField
-              label="Last Exam Marks"
-              type="text"
-              value={formData.prequalifyingDetails.last_exam_marks}
-              onChange={(e) =>
-                handleInputChange("last_exam_marks", e.target.value)
-              }
-              required
-            />
-          </div> */}
         </section>
 
         {/* Submit Button */}
