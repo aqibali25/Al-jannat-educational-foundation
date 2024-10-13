@@ -8,10 +8,10 @@ import "./AdmissionForm.css";
 const AdmissionForm = () => {
   const [formData, setFormData] = useState({
     uploadedImage: "",
-    academicYear: "",
-    applicationDate: "",
-    collegeName: "",
-    class: "",
+    // academicYear: "",
+    // applicationDate: "",
+    // collegeName: "",
+    // class: "",
     sscBoard: "",
     sscSeatNumber: "",
     marksObtained: "",
