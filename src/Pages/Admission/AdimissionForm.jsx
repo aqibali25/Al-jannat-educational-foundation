@@ -8,10 +8,10 @@ import "./AdmissionForm.css";
 const AdmissionForm = () => {
   const [formData, setFormData] = useState({
     uploadedImage: "",
-    // academicYear: "",
-    // applicationDate: "",
-    // collegeName: "",
-    // class: "",
+    academicYear: "",
+    applicationDate: "",
+    collegeName: "",
+    class: "",
     sscBoard: "",
     sscSeatNumber: "",
     marksObtained: "",
@@ -30,9 +30,9 @@ const AdmissionForm = () => {
     annualIncome: "",
     maritalStatus: "Single", // Default value
     academicDetails: {
-      academicYear: "",
-      applicationDate: "",
-      collegeName: "",
+      qualification: "",
+      passingYear: "",
+      institute: "",
       class: "",
     },
     prequalifyingDetails: {
@@ -339,27 +339,19 @@ const AdmissionForm = () => {
         <div class="form-details">
           <label>
             <strong>Academic Year:</strong>
-            <p class="input-field">${
-              formData.academicDetails.academicYear || "N/A"
-            }</p>
+            <p class="input-field">${formData.academicYear || "N/A"}</p>
           </label>
           <label>
             <strong>Application Date:</strong>
-            <p class="input-field">${
-              formData.academicDetails.applicationDate || "N/A"
-            }</p>
+            <p class="input-field">${formData.applicationDate || "N/A"}</p>
           </label>
           <label>
             <strong>College Name:</strong>
-            <p class="input-field">${
-              formData.academicDetails.collegeName || "N/A"
-            }</p>
+            <p class="input-field">${formData.collegeName || "N/A"}</p>
           </label>
           <label>
             <strong>Class:</strong>
-            <p class="input-field">${
-              formData.academicDetails.class || "N/A"
-            }</p>
+            <p class="input-field">${formData.class || "N/A"}</p>
           </label>
         </div>
         <div class="image-input-container">
@@ -444,21 +436,15 @@ const AdmissionForm = () => {
         </label>
         <label>
           <strong>Passing Year:</strong>
-          <p class="input-field">${
-            formData.academicDetails.passingYear || "N/A"
-          }</p>
+          <p class="input-field">${formData.passingYear || "N/A"}</p>
         </label>
         <label>
           <strong>SSC Seat Number:</strong>
-          <p class="input-field">${
-            formData.academicDetails.sscSeatNumber || "N/A"
-          }</p>
+          <p class="input-field">${formData.sscSeatNumber || "N/A"}</p>
         </label>
         <label>
           <strong>Marks Obtained:</strong>
-          <p class="input-field">${
-            formData.academicDetails.marksObtained || "N/A"
-          }</p>
+          <p class="input-field">${formData.marksObtained || "N/A"}</p>
         </label>
       </div>`
         : ""
