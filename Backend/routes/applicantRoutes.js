@@ -89,9 +89,9 @@ router.post("/applicant", (req, res) => {
           academicSql,
           [
             applicantId,
-            academicDetails.qualification,
-            academicDetails.institute,
-            academicDetails.passingYear,
+            academicDetails.academicYear,
+            academicDetails.applicantionDate,
+            academicDetails.collegeName,
             academicDetails.class, // Ensure you have this property in your academicDetails object
           ],
           (academicErr) => {
