@@ -89,9 +89,9 @@ router.post("/applicant", (req, res) => {
           academicSql,
           [
             applicantId,
-            academicDetails.academicYear,
-            academicDetails.applicantionDate,
-            academicDetails.collegeName,
+            academicDetails.qualification,
+            academicDetails.institute,
+            academicDetails.passingYear,
             academicDetails.class, // Ensure you have this property in your academicDetails object
           ],
           (academicErr) => {
@@ -153,6 +153,7 @@ router.post("/applicant", (req, res) => {
             last_attended_institute,
             last_exam_passed,
             last_exam_passed_year,
+            last_exam_marks
           ) VALUES (?, ?, ?, ?, ?)
         `;
 
@@ -163,6 +164,7 @@ router.post("/applicant", (req, res) => {
             prequalifyingDetails.last_attended_institute,
             prequalifyingDetails.last_exam_passed,
             prequalifyingDetails.last_exam_passed_year,
+            prequalifyingDetails.last_exam_marks,
           ],
           (prequalifyingErr) => {
             if (prequalifyingErr) {

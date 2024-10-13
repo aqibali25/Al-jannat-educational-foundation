@@ -8,10 +8,10 @@ import "./AdmissionForm.css";
 const AdmissionForm = () => {
   const [formData, setFormData] = useState({
     uploadedImage: "",
-    // academicYear: "",
-    // applicationDate: "",
-    // collegeName: "",
-    // class: "",
+    academicYear: "",
+    applicationDate: "",
+    collegeName: "",
+    class: "",
     sscBoard: "",
     sscSeatNumber: "",
     marksObtained: "",
@@ -30,15 +30,16 @@ const AdmissionForm = () => {
     annualIncome: "",
     maritalStatus: "Single", // Default value
     academicDetails: {
-      academicYear: "",
-      applicationDate: "",
-      collegeName: "",
+      qualification: "",
+      institute: "",
+      passingYear: "",
       class: "",
     },
     prequalifyingDetails: {
       last_attended_institute: "",
       last_exam_passed: "",
       last_exam_passed_year: "",
+      last_exam_marks: "",
     },
     sscDetails: {
       ssc_hsc_board: "",
@@ -142,15 +143,16 @@ const AdmissionForm = () => {
         annualIncome: "",
         maritalStatus: "Single", // Default value
         academicDetails: {
-          academicYear: "",
-          applicationDate: "",
-          collegeName: "",
-          class: "",
+          qualification: "",
+          institute: "",
+          passingYear: "",
+          percentage: "",
         },
         prequalifyingDetails: {
           last_attended_institute: "",
           last_exam_passed: "",
           last_exam_passed_year: "",
+          last_exam_marks: "",
         },
         sscDetails: {
           ssc_hsc_board: "",
@@ -199,14 +201,14 @@ const AdmissionForm = () => {
       h1 {
         text-align: center;
         color: #333;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         font-size: 2.5rem;
       }
 
       .preview-container {
         padding: 30px;
         max-width: 700px;
-        margin: auto;
+        margin: 50px auto;
         background-color: #ffffff;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 15px;
@@ -339,27 +341,19 @@ const AdmissionForm = () => {
         <div class="form-details">
           <label>
             <strong>Academic Year:</strong>
-            <p class="input-field">${
-              formData.academicDetails.academicYear || "N/A"
-            }</p>
+            <p class="input-field">${formData.academicYear || "N/A"}</p>
           </label>
           <label>
             <strong>Application Date:</strong>
-            <p class="input-field">${
-              formData.academicDetails.applicationDate || "N/A"
-            }</p>
+            <p class="input-field">${formData.applicationDate || "N/A"}</p>
           </label>
           <label>
             <strong>College Name:</strong>
-            <p class="input-field">${
-              formData.academicDetails.collegeName || "N/A"
-            }</p>
+            <p class="input-field">${formData.collegeName || "N/A"}</p>
           </label>
           <label>
             <strong>Class:</strong>
-            <p class="input-field">${
-              formData.academicDetails.class || "N/A"
-            }</p>
+            <p class="input-field">${formData.class || "N/A"}</p>
           </label>
         </div>
         <div class="image-input-container">
@@ -504,7 +498,7 @@ const AdmissionForm = () => {
   const printChallan = (event) => {
     event.preventDefault();
 
-    const classValue = formData.academicDetails.class.toString().toLowerCase();
+    const classValue = formData.class.toString().toLowerCase();
 
     const payment =
       classValue === "6" ||
@@ -542,11 +536,11 @@ const AdmissionForm = () => {
         { label: 3, copyTag: "Bank" },
       ],
       challanNo: challanNumber,
-      school: formData.academicDetails.collegeName,
+      school: formData.collegeName,
       dueDate: "2024-12-31",
       regRollNo: "",
       name: formData.applicantName,
-      class: formData.academicDetails.class,
+      class: formData.class,
       scholarshipProcessingFee: "",
       discount: "",
       scholarships: "",
@@ -1175,6 +1169,17 @@ const AdmissionForm = () => {
               required
             />
           </div>
+          {/* <div className="col-md-6">
+            <FormField
+              label="Last Exam Marks"
+              type="text"
+              value={formData.prequalifyingDetails.last_exam_marks}
+              onChange={(e) =>
+                handleInputChange("last_exam_marks", e.target.value)
+              }
+              required
+            />
+          </div> */}
         </section>
 
         {/* Submit Button */}
