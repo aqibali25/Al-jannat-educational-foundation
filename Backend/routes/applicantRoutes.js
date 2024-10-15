@@ -149,12 +149,12 @@ router.post("/applicant", (req, res) => {
       if (prequalifyingDetails) {
         const prequalifyingSql = `
           INSERT INTO prequalifyingdetails (
-            applicant_id,
-            last_attended_institute,
-            last_exam_passed,
-            last_exam_passed_year,
-            last_exam_marks
-          ) VALUES (?, ?, ?, ?, ?)
+          applicant_id,
+          last_attended_institute,
+          last_exam_passed,
+          last_exam_passed_year
+          ) VALUES (?, ?, ?, ?);
+
         `;
 
         db.query(
@@ -164,7 +164,6 @@ router.post("/applicant", (req, res) => {
             prequalifyingDetails.last_attended_institute,
             prequalifyingDetails.last_exam_passed,
             prequalifyingDetails.last_exam_passed_year,
-            prequalifyingDetails.last_exam_marks,
           ],
           (prequalifyingErr) => {
             if (prequalifyingErr) {
