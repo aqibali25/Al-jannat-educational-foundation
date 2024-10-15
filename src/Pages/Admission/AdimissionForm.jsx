@@ -8,10 +8,6 @@ import "./AdmissionForm.css";
 const AdmissionForm = () => {
   const [formData, setFormData] = useState({
     uploadedImage: "",
-    // academicYear: "",
-    // applicationDate: "",
-    // collegeName: "",
-    // class: "",
     sscBoard: "",
     sscSeatNumber: "",
     marksObtained: "",
@@ -39,7 +35,6 @@ const AdmissionForm = () => {
       last_attended_institute: "",
       last_exam_passed: "",
       last_exam_passed_year: "",
-      last_exam_marks: "",
     },
     sscDetails: {
       ssc_hsc_board: "",
@@ -94,7 +89,9 @@ const AdmissionForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formData.academicDetails);
+
+    console.log({ ...formData.prequalifyingDetails });
+
     // Assuming there's a function to generate a challan number
     const newChallanNumber = generateChallanNo();
     setIsSubmitted(true);
@@ -122,13 +119,6 @@ const AdmissionForm = () => {
       // Reset form data
       setFormData({
         uploadedImage: "",
-        academicYear: "",
-        applicationDate: "",
-        collegeName: "",
-        class: "",
-        sscBoard: "",
-        sscSeatNumber: "",
-        marksObtained: "",
         applicantName: "",
         fathersName: "",
         dateOfBirth: "",
@@ -153,7 +143,6 @@ const AdmissionForm = () => {
           last_attended_institute: "",
           last_exam_passed: "",
           last_exam_passed_year: "",
-          last_exam_marks: "",
         },
         sscDetails: {
           ssc_hsc_board: "",
@@ -355,7 +344,7 @@ const AdmissionForm = () => {
           <label>
             <strong>College Name:</strong>
             <p class="input-field">${
-              formData.academicDetails.acollegeName || "N/A"
+              formData.academicDetails.collegeName || "N/A"
             }</p>
           </label>
           <label>
@@ -435,32 +424,34 @@ const AdmissionForm = () => {
       </div>
 
     ${
-      formData.sscBoard.length > 0 &&
-      formData.passingYear.length > 0 &&
-      formData.sscSeatNumber.length > 0 &&
-      formData.marksObtained.length > 0
+      formData.sscDetails.ssc_hsc_board.length > 0 &&
+      formData.sscDetails.passing_year.length > 0 &&
+      formData.sscDetails.ssc_hsc_seat_number.length > 0 &&
+      formData.sscDetails.marks_obtained.length > 0
         ? `<div class="section-title">Student SSC Details</div>
       <div class="row">
         <label>
           <strong>SSC Board:</strong>
-          <p class="input-field">${formData.sscBoard || "N/A"}</p>
+          <p class="input-field">${
+            formData.sscDetails.ssc_hsc_board || "N/A"
+          }</p>
         </label>
         <label>
           <strong>Passing Year:</strong>
           <p class="input-field">${
-            formData.academicDetails.passingYear || "N/A"
+            formData.sscDetails.passing_year || "N/A"
           }</p>
         </label>
         <label>
           <strong>SSC Seat Number:</strong>
           <p class="input-field">${
-            formData.academicDetails.sscSeatNumber || "N/A"
+            formData.sscDetails.ssc_hsc_seat_number || "N/A"
           }</p>
         </label>
         <label>
           <strong>Marks Obtained:</strong>
           <p class="input-field">${
-            formData.academicDetails.marksObtained || "N/A"
+            formData.sscDetails.marks_obtained || "N/A"
           }</p>
         </label>
       </div>`
@@ -551,7 +542,7 @@ const AdmissionForm = () => {
       dueDate: "2024-12-31",
       regRollNo: "",
       name: formData.applicantName,
-      class: formData.academicDetails.applicantClass,
+      applicantClass: formData.academicDetails.applicantClass,
       scholarshipProcessingFee: "",
       discount: "",
       scholarships: "",
