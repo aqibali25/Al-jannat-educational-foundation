@@ -8,10 +8,10 @@ import "./AdmissionForm.css";
 const AdmissionForm = () => {
   const [formData, setFormData] = useState({
     uploadedImage: "",
-    academicYear: "",
-    applicationDate: "",
-    collegeName: "",
-    class: "",
+    // academicYear: "",
+    // applicationDate: "",
+    // collegeName: "",
+    // class: "",
     sscBoard: "",
     sscSeatNumber: "",
     marksObtained: "",
@@ -30,10 +30,10 @@ const AdmissionForm = () => {
     annualIncome: "",
     maritalStatus: "Single", // Default value
     academicDetails: {
-      qualification: "",
-      institute: "",
-      passingYear: "",
-      class: "",
+      academicYear: "",
+      applicationDate: "",
+      collegeName: "",
+      applicantClass: "",
     },
     prequalifyingDetails: {
       last_attended_institute: "",
@@ -94,6 +94,7 @@ const AdmissionForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(formData.academicDetails);
     // Assuming there's a function to generate a challan number
     const newChallanNumber = generateChallanNo();
     setIsSubmitted(true);
@@ -143,10 +144,10 @@ const AdmissionForm = () => {
         annualIncome: "",
         maritalStatus: "Single", // Default value
         academicDetails: {
-          qualification: "",
-          institute: "",
-          passingYear: "",
-          percentage: "",
+          academicYear: "",
+          applicationDate: "",
+          collegeName: "",
+          applicantClass: "",
         },
         prequalifyingDetails: {
           last_attended_institute: "",
@@ -341,19 +342,27 @@ const AdmissionForm = () => {
         <div class="form-details">
           <label>
             <strong>Academic Year:</strong>
-            <p class="input-field">${formData.academicYear || "N/A"}</p>
+            <p class="input-field">${
+              formData.academicDetails.academicYear || "N/A"
+            }</p>
           </label>
           <label>
             <strong>Application Date:</strong>
-            <p class="input-field">${formData.applicationDate || "N/A"}</p>
+            <p class="input-field">${
+              formData.academicDetails.applicationDate || "N/A"
+            }</p>
           </label>
           <label>
             <strong>College Name:</strong>
-            <p class="input-field">${formData.collegeName || "N/A"}</p>
+            <p class="input-field">${
+              formData.academicDetails.acollegeName || "N/A"
+            }</p>
           </label>
           <label>
             <strong>Class:</strong>
-            <p class="input-field">${formData.class || "N/A"}</p>
+            <p class="input-field">${
+              formData.academicDetails.applicantClass || "N/A"
+            }</p>
           </label>
         </div>
         <div class="image-input-container">
@@ -498,7 +507,9 @@ const AdmissionForm = () => {
   const printChallan = (event) => {
     event.preventDefault();
 
-    const classValue = formData.class.toString().toLowerCase();
+    const classValue = formData.academicDetails.applicantClass
+      .toString()
+      .toLowerCase();
 
     const payment =
       classValue === "6" ||
@@ -536,11 +547,11 @@ const AdmissionForm = () => {
         { label: 3, copyTag: "Bank" },
       ],
       challanNo: challanNumber,
-      school: formData.collegeName,
+      school: formData.academicDetails.collegeName,
       dueDate: "2024-12-31",
       regRollNo: "",
       name: formData.applicantName,
-      class: formData.class,
+      class: formData.academicDetails.applicantClass,
       scholarshipProcessingFee: "",
       discount: "",
       scholarships: "",
@@ -767,7 +778,7 @@ const AdmissionForm = () => {
                 </div>
                 <div class="row">
                   <label>Class:</label>
-                  <p class="fields">${challanData.class}</p>
+                  <p class="fields">${challanData.applicantClass}</p>
                 </div>
                 <div class="row">
                   <label>Scholarship Processing Fee:</label>
@@ -904,7 +915,7 @@ const AdmissionForm = () => {
               <FormField
                 label="Academic Year"
                 type="text"
-                value={formData.academicYear}
+                value={formData.academicDetails.academicYear}
                 onChange={(e) =>
                   handleInputChange("academicYear", e.target.value)
                 }
@@ -913,7 +924,7 @@ const AdmissionForm = () => {
               <FormField
                 label="Application Date"
                 type="date"
-                value={formData.applicationDate}
+                value={formData.academicDetails.applicationDate}
                 onChange={(e) =>
                   handleInputChange("applicationDate", e.target.value)
                 }
@@ -922,7 +933,7 @@ const AdmissionForm = () => {
               <FormField
                 label="College Name"
                 type="text"
-                value={formData.collegeName}
+                value={formData.academicDetails.collegeName}
                 onChange={(e) =>
                   handleInputChange("collegeName", e.target.value)
                 }
@@ -931,8 +942,10 @@ const AdmissionForm = () => {
               <FormField
                 label="Class"
                 type="text"
-                value={formData.class}
-                onChange={(e) => handleInputChange("class", e.target.value)}
+                value={formData.academicDetails.applicantClass}
+                onChange={(e) =>
+                  handleInputChange("applicantClass", e.target.value)
+                }
                 required
               />
             </div>
